@@ -6,6 +6,7 @@ import React from 'react';
 import Onboarding from '../screens/Onboarding';
 import {Welcome} from '../screens/Welcome';
 import {Regiter} from '../screens/Regiter';
+import {Goal} from '../screens/Goal';
 
 type PublicStackParamList = {
   Welcome: undefined;
@@ -31,6 +32,11 @@ export const Public = () => {
       <Screen
         name="Register"
         component={Regiter}
+        options={{headerTitle: '', headerShown: false}}
+      />
+      <Screen
+        name="Goal"
+        component={Goal}
         options={{headerTitle: '', headerShown: false}}
       />
     </Navigator>

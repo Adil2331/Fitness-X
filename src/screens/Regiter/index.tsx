@@ -126,7 +126,7 @@ export const Regiter = () => {
         {/* <Button title="Submit" onPress={handleSubmit(onSubmit)} /> */}
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end'}}>
-        <BtnLayout onPress={() => navigate('Welcome')} text="Register" />
+        <BtnLayout onPress={() => navigate('Goal')} text="Register" />
         <View style={styles.orItemContainer}>
           <View style={styles.lineItem}></View>
           <Text>Or</Text>
@@ -160,8 +160,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 30,
-    minHeight: '100%',
-    flexDirection: 'column',
+    // minHeight: '100%',
+    // flexDirection: 'column',
     backgroundColor: '#fff',
   },
   text: {
