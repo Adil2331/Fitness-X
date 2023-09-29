@@ -8,6 +8,7 @@ import {Welcome} from '../screens/Welcome';
 import {Regiter} from '../screens/Regiter';
 import {Goal} from '../screens/Goal';
 import {Login} from '../screens/Login';
+import {GoToHome} from '../screens/GoToHome';
 
 type PublicStackParamList = {
   Welcome: undefined;
@@ -43,6 +44,11 @@ export const Public = () => {
       <Screen
         name="Login"
         component={Login}
+        options={{headerTitle: '', headerShown: false}}
+      />
+      <Screen
+        name="GoToHome"
+        component={GoToHome}
         options={{headerTitle: '', headerShown: false}}
       />
     </Navigator>

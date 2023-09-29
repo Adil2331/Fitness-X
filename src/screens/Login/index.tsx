@@ -80,7 +80,7 @@ export const Login = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.bottomContainer}>
-        <BtnLayout onPress={() => navigate('Welcome')} text="Login" />
+        <BtnLayout onPress={() => navigate('GoToHome')} text="Login" />
         <View style={styles.orItemContainer}>
           <View style={styles.lineItem}></View>
           <Text>Or</Text>

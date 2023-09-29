@@ -1,26 +1,26 @@
 import React from 'react';
 import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import GoHomeImg from '../../assets/svg/GoHome-Img';
 import {StyleSheet, Text, View} from 'react-native';
 import {BtnLayout} from '../../components/BtnLayout';
 import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
-import {SimpleCarousel} from '../../components/Carousel';
 
-export const Goal = () => {
+export const GoToHome = () => {
   const {navigate} = useNavigation<PublicStackScreenProps['navigation']>();
   return (
     <SafeAreaLayout top bottom style={styles.container}>
       <View style={styles.headerContainer}>
-        <Text style={styles.title}>What is your goal ?</Text>
-        <Text style={styles.text}>
-          It will help us to choose a best program for you
-        </Text>
-        <View style={styles.carouselContainer}>
-          <SimpleCarousel />
-        </View>
+        <GoHomeImg />
       </View>
-      <View style={styles.btnContainer}>
-        <BtnLayout onPress={() => navigate('Login')} text="Confirm" />
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>Welcome, Stefani</Text>
+        <Text style={styles.text}>
+          You are all set now, let’s reach your goals together with us
+        </Text>
+      </View>
+      <View style={styles.bottomConatiner}>
+        <BtnLayout onPress={() => navigate('Welcome')} text="Go To Home" />
       </View>
     </SafeAreaLayout>
   );
@@ -29,10 +29,14 @@ export const Goal = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between',
-    backgroundColor: '#fff',
+    paddingHorizontal: 30,
   },
   headerContainer: {
+    paddingTop: 60,
+    paddingBottom: 40,
+    alignItems: 'center',
+  },
+  textContainer: {
     alignItems: 'center',
   },
   title: {
@@ -44,14 +48,12 @@ const styles = StyleSheet.create({
     color: '#7B6F72',
     textAlign: 'center',
     fontSize: 12,
-    width: 182,
+    width: 214,
     lineHeight: 18,
     marginBottom: 50,
   },
-  carouselContainer: {
-    width: 500,
-  },
-  btnContainer: {
-    paddingHorizontal: 30,
+  bottomConatiner: {
+    flex: 1,
+    justifyContent: 'flex-end',
   },
 });
