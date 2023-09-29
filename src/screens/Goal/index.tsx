@@ -20,7 +20,7 @@ export const Goal = () => {
         </View>
       </View>
       <View style={styles.btnContainer}>
-        <BtnLayout onPress={() => navigate('Welcome')} text="Confirm" />
+        <BtnLayout onPress={() => navigate('Login')} text="Confirm" />
       </View>
     </SafeAreaLayout>
   );

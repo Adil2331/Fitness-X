@@ -1,87 +1,40 @@
 import React from 'react';
-import {Controller, useForm} from 'react-hook-form';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout';
 import {
-  Button,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
-import FirstName from '../../assets/svg/FirstName';
-import Email from '../../assets/svg/Email';
-import Password from '../../assets/svg/Password';
 import {BtnLayout} from '../../components/BtnLayout';
-import {useNavigation} from '@react-navigation/native';
-import {PublicStackScreenProps} from '../../navigation/Public';
 import GoogleIcon from '../../assets/svg/Google-icon';
 import FacebookIcon from '../../assets/svg/Facebook-icon';
+import {Controller, useForm} from 'react-hook-form';
+import Password from '../../assets/svg/Password';
+import Email from '../../assets/svg/Email';
+import {useNavigation} from '@react-navigation/native';
+import {PublicStackScreenProps} from '../../navigation/Public';
 
-export const Regiter = () => {
+export const Login = () => {
   const {navigate} = useNavigation<PublicStackScreenProps['navigation']>();
   const {
     control,
     // handleSubmit,
-    formState: {errors},
+    // formState: {errors},
   } = useForm({
     defaultValues: {
-      firstName: '',
-      lastName: '',
       email: '',
       password: '',
     },
   });
-  //   const onSubmit = data => console.log(data);
-
   return (
-    <SafeAreaLayout style={styles.container} bottom top>
-      <Text style={styles.text}>Hey there,</Text>
-      <Text style={styles.title}>Create an Account</Text>
+    <SafeAreaLayout top bottom style={styles.container}>
       <View>
-        <Controller
-          control={control}
-          rules={{
-            required: true,
-          }}
-          render={({field: {onChange, onBlur, value}}) => (
-            <View style={styles.inputContainer}>
-              <FirstName style={styles.inputImg} />
-              <TextInput
-                style={styles.inputText}
-                placeholderTextColor={'#ADA4A5'}
-                placeholder="First name"
-                onBlur={onBlur}
-                onChangeText={onChange}
-                value={value}
-              />
-            </View>
-          )}
-          name="firstName"
-        />
-        {errors.firstName && <Text>This is required.</Text>}
-
-        <Controller
-          control={control}
-          rules={{
-            maxLength: 100,
-          }}
-          render={({field: {onChange, onBlur, value}}) => (
-            <View style={styles.inputContainer}>
-              <FirstName style={styles.inputImg} />
-              <TextInput
-                style={styles.inputText}
-                placeholderTextColor={'#ADA4A5'}
-                placeholder="Last name"
-                onBlur={onBlur}
-                onChangeText={onChange}
-                value={value}
-              />
-            </View>
-          )}
-          name="lastName"
-        />
-
+        <Text style={styles.text}>Hey there,</Text>
+        <Text style={styles.title}>Welcome Back</Text>
+      </View>
+      <View>
         <Controller
           control={control}
           rules={{
@@ -102,7 +55,6 @@ export const Regiter = () => {
           )}
           name="email"
         />
-
         <Controller
           control={control}
           rules={{
@@ -123,10 +75,12 @@ export const Regiter = () => {
           )}
           name="password"
         />
-        {/* <Button title="Submit" onPress={handleSubmit(onSubmit)} /> */}
+        <TouchableOpacity>
+          <Text style={styles.textForgot}>Forgot your password?</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.bottomContainer}>
-        <BtnLayout onPress={() => navigate('Goal')} text="Register" />
+        <BtnLayout onPress={() => navigate('Welcome')} text="Login" />
         <View style={styles.orItemContainer}>
           <View style={styles.lineItem}></View>
           <Text>Or</Text>
@@ -141,9 +95,9 @@ export const Regiter = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.lastLink}>
-          <Text>Already have an account?</Text>
-          <TouchableOpacity>
-            <Text style={styles.linkText}> Login</Text>
+          <Text>Don’t have an account yet?</Text>
+          <TouchableOpacity onPress={() => navigate('Register')}>
+            <Text style={styles.linkText}> Register</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -180,6 +134,12 @@ const styles = StyleSheet.create({
   },
   inputText: {
     fontSize: 12,
+  },
+  textForgot: {
+    textAlign: 'center',
+    color: '#ADA4A5',
+    fontSize: 12,
+    textDecorationLine: 'underline',
   },
   bottomContainer: {
     flex: 1,
