@@ -2,6 +2,7 @@ import React from 'react';
 import {Controller, useForm} from 'react-hook-form';
 import {
   Button,
+  Platform,
   StyleSheet,
   Text,
   TextInput,
@@ -45,7 +46,11 @@ export const Regiter = () => {
             required: true,
           }}
           render={({field: {onChange, onBlur, value}}) => (
-            <View style={styles.inputContainer}>
+            <View
+              style={[
+                styles.inputContainer,
+                Platform.OS === 'ios' ? styles.inputIos : styles.inputAndroid,
+              ]}>
               <FirstName style={styles.inputImg} />
               <TextInput
                 style={styles.inputText}
@@ -67,7 +72,11 @@ export const Regiter = () => {
             maxLength: 100,
           }}
           render={({field: {onChange, onBlur, value}}) => (
-            <View style={styles.inputContainer}>
+            <View
+              style={[
+                styles.inputContainer,
+                Platform.OS === 'ios' ? styles.inputIos : styles.inputAndroid,
+              ]}>
               <FirstName style={styles.inputImg} />
               <TextInput
                 style={styles.inputText}
@@ -88,7 +97,11 @@ export const Regiter = () => {
             maxLength: 100,
           }}
           render={({field: {onChange, onBlur, value}}) => (
-            <View style={styles.inputContainer}>
+            <View
+              style={[
+                styles.inputContainer,
+                Platform.OS === 'ios' ? styles.inputIos : styles.inputAndroid,
+              ]}>
               <Email style={styles.inputImg} />
               <TextInput
                 style={styles.inputText}
@@ -109,7 +122,11 @@ export const Regiter = () => {
             maxLength: 100,
           }}
           render={({field: {onChange, onBlur, value}}) => (
-            <View style={styles.inputContainer}>
+            <View
+              style={[
+                styles.inputContainer,
+                Platform.OS === 'ios' ? styles.inputIos : styles.inputAndroid,
+              ]}>
               <Password style={styles.inputImg} />
               <TextInput
                 style={styles.inputText}
@@ -158,6 +175,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   text: {
+    paddingTop: 10,
     textAlign: 'center',
     fontSize: 16,
     marginBottom: 15,
@@ -169,8 +187,8 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   inputContainer: {
+    alignItems: 'center',
     backgroundColor: '#F7F8F8',
-    padding: 15,
     borderRadius: 14,
     flexDirection: 'row',
     marginBottom: 15,
@@ -216,5 +234,11 @@ const styles = StyleSheet.create({
   },
   linkText: {
     color: '#C58BF2',
+  },
+  inputAndroid: {
+    paddingHorizontal: 15,
+  },
+  inputIos: {
+    padding: 15,
   },
 });
