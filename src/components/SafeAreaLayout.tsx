@@ -39,12 +39,12 @@ export const SafeAreaLayout: FC<PropsWithChildren<SafeAreaLayoutProps>> = ({
       colors={colors}
       start={start}
       end={end}
-      style={[style, top && {paddingTop: up}, bottom && {paddingBottom: down}]}>
+      style={[top && {paddingTop: up}, bottom && {paddingBottom: down}, style]}>
       {children}
     </LinearGradient>
   ) : (
     <View
-      style={[top && {paddingTop: up}, bottom && {paddingBottom: down}, style]}>
+      style={[top && {paddingTop: up}, bottom && {paddingBottom: 30}, style]}>
       {children}
     </View>
   );

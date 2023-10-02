@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
   carouselContainer: {
-    width: 500,
+    width: '100%',
   },
   btnContainer: {
     paddingHorizontal: 30,

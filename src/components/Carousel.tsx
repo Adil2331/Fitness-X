@@ -1,10 +1,13 @@
 import React from 'react';
+import {Dimensions} from 'react-native';
 import {
   Carousel,
   DOTS_ANIMATION_TYPE,
   SLIDE_ANIMATION_TYPE,
   SlideItem,
 } from 'react-native-carousel-infinity';
+const height = Dimensions.get('screen').height;
+const width = Dimensions.get('screen').width;
 
 const data: SlideItem[] = [
   {id: '1', image: require('../assets/Card-Goals.png')},
@@ -13,8 +16,8 @@ const data: SlideItem[] = [
   //   {id: '4', image: require('../assets/Card-Goals.png')},
 ];
 
-const SLIDE_WIDTH = 280;
-const SLIDE_HORIZONTAL_OFFSET = 5;
+const SLIDE_WIDTH = width - width * 0.3;
+const SLIDE_HORIZONTAL_OFFSET = 0;
 const FAKE_PER_SIDE = 3;
 
 export const SimpleCarousel = () => {
@@ -32,7 +35,12 @@ export const SimpleCarousel = () => {
       dotsAnimationType={DOTS_ANIMATION_TYPE.SCALE}
       dotStyles={false}
       slideStyles={{
-        height: 500,
+        height: height * 0.6,
+      }}
+      imageStyles={{
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain',
       }}
       containerWidth
     />
