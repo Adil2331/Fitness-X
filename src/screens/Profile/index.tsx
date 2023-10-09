@@ -65,8 +65,8 @@ export const Profile = () => {
           <InnerBtn text="Edit" />
         </View>
         <View style={styles.userInfoContainer}>
-          {Data.map(e => (
-            <View style={styles.userInfiItmes}>
+          {Data.map((e, i) => (
+            <View style={styles.userInfiItmes} key={i}>
               <Text style={styles.userInfoTitle}>{e.title}</Text>
               <Text style={styles.userInfoText}>{e.text}</Text>
             </View>
@@ -74,8 +74,8 @@ export const Profile = () => {
         </View>
         <View style={styles.mainContainer}>
           <Text style={styles.mainTitle}>Account</Text>
-          {AcountItems.map(e => (
-            <TouchableOpacity style={styles.mainItem}>
+          {AcountItems.map((e, i) => (
+            <TouchableOpacity style={styles.mainItem} key={i}>
               <View style={styles.mainItemContainer}>
                 {e.img}
                 <Text style={styles.mainItemText}>{e.text}</Text>
@@ -100,8 +100,8 @@ export const Profile = () => {
         </View>
         <View style={styles.mainContainer}>
           <Text style={styles.mainTitle}>Other</Text>
-          {Other.map(e => (
-            <TouchableOpacity style={styles.mainItem}>
+          {Other.map((e, i) => (
+            <TouchableOpacity style={styles.mainItem} key={i}>
               <View style={styles.mainItemContainer}>
                 {e.img}
                 <Text style={styles.mainItemText}>{e.text}</Text>

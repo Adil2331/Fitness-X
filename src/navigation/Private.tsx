@@ -7,6 +7,8 @@ import {TabNavigator} from './TabNavigator';
 import {Activity} from '../screens/Activity';
 import {Profile} from '../screens/Profile';
 import {ProgressPhoto} from '../screens/ProgressPhoto';
+import NotifeIcon from '../assets/ProfileImg/NotifIcon';
+import {Notification} from '../screens/Notification';
 type PrivateStackParamList = {};
 export type PrivateStackScreenProps =
   NativeStackScreenProps<PrivateStackParamList>;
@@ -33,6 +35,11 @@ export const Private = () => {
       <Screen
         name="ProgressPhoto"
         component={ProgressPhoto}
+        options={{headerShown: false}}
+      />
+      <Screen
+        name="Notification"
+        component={Notification}
         options={{headerShown: false}}
       />
     </Navigator>

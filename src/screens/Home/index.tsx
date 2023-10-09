@@ -10,8 +10,13 @@ import {
 } from 'react-native';
 import {SafeAreaLayout} from '../../components/SafeAreaLayout';
 import NotificationIcon from '../../assets/svg/NotificationIcon';
+import {useNavigation} from '@react-navigation/native';
+import {PrivateStackScreenProps} from '../../navigation/Private';
+
 const width = Dimensions.get('screen').width;
+
 export const Home = () => {
+  const {navigate} = useNavigation<PrivateStackScreenProps['navigation']>();
   return (
     <SafeAreaLayout style={styles.container} bottom top>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -20,7 +25,9 @@ export const Home = () => {
             <Text style={styles.headerText}>Welcome Back,</Text>
             <Text style={styles.headerTitle}>Stefani Wong</Text>
           </View>
-          <TouchableOpacity style={styles.notificationBtn}>
+          <TouchableOpacity
+            style={styles.notificationBtn}
+            onPress={() => navigate('Notification')}>
             <NotificationIcon />
           </TouchableOpacity>
         </View>
