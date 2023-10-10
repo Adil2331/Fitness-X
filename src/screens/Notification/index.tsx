@@ -70,35 +70,15 @@ export const Notification = () => {
         {Data.map((e, i) => (
           <TouchableOpacity
             key={i}
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginTop: 15,
-              paddingBottom: 15,
-              borderBottomWidth: 1,
-              borderBottomColor: '#DDDADA',
-            }}>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }}>
+            style={[
+              styles.main,
+              i !== Data.length - 1 && styles.mainContainer,
+            ]}>
+            <View style={styles.mainInner}>
               {e.img}
-              <View style={{marginLeft: 10}}>
-                <Text style={{fontSize: 12, fontWeight: '500', lineHeight: 18}}>
-                  {e.title}
-                </Text>
-                <Text
-                  style={{
-                    color: '#7B6F72',
-                    fontSize: 10,
-                    fontWeight: '400',
-                    lineHeight: 15,
-                  }}>
-                  {e.text}
-                </Text>
+              <View style={styles.mainInnerContainer}>
+                <Text style={styles.mainInnerTitle}>{e.title}</Text>
+                <Text style={styles.mainInnerText}>{e.text}</Text>
               </View>
             </View>
             <MoreIcon />
@@ -136,7 +116,36 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
-
     elevation: 2,
+  },
+  main: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: 15,
+    paddingBottom: 15,
+  },
+  mainContainer: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#DDDADA',
+  },
+  mainInner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  mainInnerContainer: {
+    marginLeft: 10,
+  },
+  mainInnerTitle: {
+    fontSize: 12,
+    fontWeight: '500',
+    lineHeight: 18,
+  },
+  mainInnerText: {
+    color: '#7B6F72',
+    fontSize: 10,
+    fontWeight: '400',
+    lineHeight: 15,
   },
 });

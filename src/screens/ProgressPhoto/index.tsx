@@ -109,7 +109,11 @@ export const ProgressPhoto = () => {
               showsHorizontalScrollIndicator={false}>
               <View style={styles.galleryItems}>
                 {arr.reverse().map((img, i) => (
-                  <Image source={img} style={styles.galleryItem} key={i} />
+                  <Image
+                    source={img}
+                    style={i !== arr.length - 1 && styles.galleryItem}
+                    key={i}
+                  />
                 ))}
               </View>
             </ScrollView>
