@@ -170,6 +170,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 15,
+    paddingHorizontal: 2,
   },
   userInfiItmes: {
     borderRadius: 16,
@@ -204,6 +205,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 16,
     marginTop: 30,
+    marginHorizontal: 2,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

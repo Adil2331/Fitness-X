@@ -11,6 +11,7 @@ import ProfileNavActive from '../assets/svg/ProvileNavActive';
 import {ProgressPhoto} from '../screens/ProgressPhoto';
 import CameraNavActive from '../assets/svg/CameraNavActive';
 import CameraNav from '../assets/svg/CameraNav';
+import ActivityNavActive from '../assets/svg/ActiveNavActive';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +23,7 @@ export const TabNavigator = () => {
           if (route.name === 'Home') {
             return focused ? <HomeNavActive /> : <HomeNav />;
           } else if (route.name === 'Activity') {
-            return <ActivityNav />;
+            return focused ? <ActivityNavActive /> : <ActivityNav />;
           } else if (route.name === 'Profile') {
             return focused ? <ProfileNavActive /> : <ProfileNav />;
           } else if (route.name === 'ProgressPhoto') {

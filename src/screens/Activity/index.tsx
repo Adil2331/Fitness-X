@@ -64,8 +64,8 @@ export const Activity = () => {
               <Text style={styles.bottomBtnText}>See more</Text>
             </TouchableOpacity>
           </View>
-          {ActivityItems.map(e => (
-            <View style={styles.bottomItems}>
+          {ActivityItems.map((e, i) => (
+            <View style={styles.bottomItems} key={i}>
               <View style={styles.bottomItemsContainer}>
                 {e.img}
                 <View style={styles.bottomItemsInner}>
@@ -148,6 +148,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 15,
     marginBottom: 15,
+    marginHorizontal: 2,
     backgroundColor: '#fff',
     shadowColor: '#000',
     shadowOffset: {
