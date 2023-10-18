@@ -51,14 +51,12 @@ const Data = [
 ];
 
 export const Notification = () => {
-  const {navigate} = useNavigation<PrivateStackScreenProps['navigation']>();
+  const {goBack} = useNavigation<PrivateStackScreenProps['navigation']>();
 
   return (
     <SafeAreaLayout top bottom style={styles.container}>
       <View style={styles.headerContainer}>
-        <TouchableOpacity
-          style={styles.headerBtn}
-          onPress={() => navigate('Home')}>
+        <TouchableOpacity style={styles.headerBtn} onPress={goBack}>
           <BackNavs />
         </TouchableOpacity>
         <Text style={styles.title}>Notification</Text>

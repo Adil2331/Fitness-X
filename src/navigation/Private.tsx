@@ -9,6 +9,7 @@ import {Profile} from '../screens/Profile';
 import {ProgressPhoto} from '../screens/ProgressPhoto';
 import NotifeIcon from '../assets/ProfileImg/NotifIcon';
 import {Notification} from '../screens/Notification';
+import {Comparison} from '../screens/Comparison';
 type PrivateStackParamList = {};
 export type PrivateStackScreenProps =
   NativeStackScreenProps<PrivateStackParamList>;
@@ -40,6 +41,11 @@ export const Private = () => {
       <Screen
         name="Notification"
         component={Notification}
+        options={{headerShown: false}}
+      />
+      <Screen
+        name="Comparison"
+        component={Comparison}
         options={{headerShown: false}}
       />
     </Navigator>

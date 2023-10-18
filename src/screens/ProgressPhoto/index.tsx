@@ -14,8 +14,11 @@ import Clock from '../../assets/ProgressPhotoImg/Clock';
 import CloseIcon from '../../assets/svg/Close';
 import CalendarIcon from '../../assets/ProgressPhotoImg/Calendar';
 import LinearGradient from 'react-native-linear-gradient';
+import {useNavigation} from '@react-navigation/native';
+import {PrivateStackScreenProps} from '../../navigation/Private';
 
 export const ProgressPhoto = () => {
+  const {navigate} = useNavigation<PrivateStackScreenProps['navigation']>();
   const obj = {
     1: require('../../assets/Photo1.png'),
     2: require('../../assets/Photo2.png'),
@@ -71,7 +74,7 @@ export const ProgressPhoto = () => {
         </View>
         <View style={styles.compare}>
           <Text style={styles.compareText}>Compare my Photo</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigate('Comparison')}>
             <LinearGradient
               colors={['#92A3FD', '#9DCEFF']}
               start={{x: 0.3, y: 0}}
