@@ -10,6 +10,7 @@ import {ProgressPhoto} from '../screens/ProgressPhoto';
 import NotifeIcon from '../assets/ProfileImg/NotifIcon';
 import {Notification} from '../screens/Notification';
 import {Comparison} from '../screens/Comparison';
+import {Result} from '../screens/Result';
 type PrivateStackParamList = {};
 export type PrivateStackScreenProps =
   NativeStackScreenProps<PrivateStackParamList>;
@@ -48,6 +49,7 @@ export const Private = () => {
         component={Comparison}
         options={{headerShown: false}}
       />
+      <Screen name="Result" component={Result} options={{headerShown: false}} />
     </Navigator>
   );
 };

@@ -22,6 +22,8 @@ import MessageIcon from '../../assets/ProfileImg/MessegeIcon';
 import PrivacyIcon from '../../assets/ProfileImg/PrivacyIcon';
 import SettingIcon from '../../assets/ProfileImg/SettingIcon';
 import FirstPerson from '../../assets/svg/FirstPerson';
+import {useDispatch} from 'react-redux';
+import {setLogin} from '../../redux/loginSlice';
 
 const Data = [
   {title: '180cm', text: 'Height'},
@@ -43,6 +45,7 @@ const Other = [
 ];
 
 export const Profile = () => {
+  const dispatch = useDispatch();
   return (
     <SafeAreaLayout top bottom style={styles.container}>
       <View style={styles.headerContainer}>
@@ -62,7 +65,7 @@ export const Profile = () => {
             <Text style={styles.userTitle}>Stefani Wong</Text>
             <Text style={styles.userText}>Lose a Fat Program</Text>
           </View>
-          <InnerBtn text="Edit" />
+          <InnerBtn text="Edit" onPress={() => dispatch(setLogin())} />
         </View>
         <View style={styles.userInfoContainer}>
           {Data.map((e, i) => (

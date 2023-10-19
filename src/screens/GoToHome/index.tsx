@@ -3,11 +3,11 @@ import {SafeAreaLayout} from '../../components/SafeAreaLayout';
 import GoHomeImg from '../../assets/svg/GoHome-Img';
 import {StyleSheet, Text, View} from 'react-native';
 import {BtnLayout} from '../../components/BtnLayout';
-import {useNavigation} from '@react-navigation/native';
-import {PublicStackScreenProps} from '../../navigation/Public';
+import {useDispatch} from 'react-redux';
+import {setLogin} from '../../redux/loginSlice';
 
 export const GoToHome = () => {
-  const {navigate} = useNavigation<PublicStackScreenProps['navigation']>();
+  const dispatch = useDispatch();
   return (
     <SafeAreaLayout top bottom style={styles.container}>
       <View style={styles.headerContainer}>
@@ -20,7 +20,7 @@ export const GoToHome = () => {
         </Text>
       </View>
       <View style={styles.bottomConatiner}>
-        <BtnLayout onPress={() => navigate('Welcome')} text="Go To Home" />
+        <BtnLayout onPress={() => dispatch(setLogin())} text="Go To Home" />
       </View>
     </SafeAreaLayout>
   );

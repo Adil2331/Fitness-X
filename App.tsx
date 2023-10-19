@@ -9,12 +9,19 @@ import React from 'react';
 
 import {Navigator} from './src/navigation/index';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {Provider} from 'react-redux';
+import store, {persistor} from './src/redux/store';
+import {PersistGate} from 'redux-persist/integration/react';
 
 function App() {
   return (
-    <SafeAreaProvider>
-      <Navigator />
-    </SafeAreaProvider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <SafeAreaProvider>
+          <Navigator />
+        </SafeAreaProvider>
+      </PersistGate>
+    </Provider>
   );
 }
 

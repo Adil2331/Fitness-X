@@ -87,7 +87,7 @@ export const ProgressPhoto = () => {
         <View style={styles.gallery}>
           <View style={styles.galleryHeader}>
             <Text style={styles.galleryHeaderTitle}>Gallery</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigate('Result')}>
               <Text style={styles.galleryHeaderBtn}>See more</Text>
             </TouchableOpacity>
           </View>
