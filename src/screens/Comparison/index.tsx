@@ -35,60 +35,22 @@ export const Comparison = () => {
         </TouchableOpacity>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={{marginTop: 30}}>
+        <View style={styles.mainContainer}>
           {CompareItems.map((e, i) => (
-            <TouchableOpacity
-              key={i}
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                backgroundColor: '#fff',
-                padding: 15,
-                borderRadius: 16,
-                marginHorizontal: 1,
-                marginBottom: 10,
-                shadowColor: '#000',
-                shadowOffset: {
-                  width: 0,
-                  height: 1,
-                },
-                shadowOpacity: 0.2,
-                shadowRadius: 1.41,
-
-                elevation: 2,
-              }}>
-              <View style={{flexDirection: 'row'}}>
+            <TouchableOpacity key={i} style={styles.main}>
+              <View style={styles.mainInner}>
                 <CalendarIcon />
-                <Text
-                  style={{
-                    marginLeft: 10,
-                    fontSize: 12,
-                    lineHeight: 18,
-                    fontWeight: '400',
-                    color: '#7B6F72',
-                  }}>
-                  {e.title}
-                </Text>
+                <Text style={styles.mainTitle}>{e.title}</Text>
               </View>
-              <View style={{flexDirection: 'row'}}>
-                <Text
-                  style={{
-                    marginRight: 10,
-                    fontSize: 12,
-                    fontWeight: '400',
-                    lineHeight: 15,
-                    color: '#ADA4A5',
-                  }}>
-                  {e.text}
-                </Text>
+              <View style={styles.mainInner}>
+                <Text style={styles.mainText}>{e.text}</Text>
                 <Arrow />
               </View>
             </TouchableOpacity>
           ))}
         </View>
       </ScrollView>
-      <View style={{marginBottom: 30}}>
+      <View style={styles.bottom}>
         <BtnLayout text="Compare" />
       </View>
     </SafeAreaLayout>
@@ -124,5 +86,47 @@ const styles = StyleSheet.create({
     shadowRadius: 1.41,
 
     elevation: 2,
+  },
+  mainContainer: {
+    marginTop: 30,
+  },
+  main: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    padding: 15,
+    borderRadius: 16,
+    marginHorizontal: 1,
+    marginBottom: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
+  mainInner: {
+    flexDirection: 'row',
+  },
+  mainTitle: {
+    marginLeft: 10,
+    fontSize: 12,
+    lineHeight: 18,
+    fontWeight: '400',
+    color: '#7B6F72',
+  },
+  mainText: {
+    marginRight: 10,
+    fontSize: 12,
+    fontWeight: '400',
+    lineHeight: 15,
+    color: '#ADA4A5',
+  },
+  bottom: {
+    marginBottom: 30,
   },
 });

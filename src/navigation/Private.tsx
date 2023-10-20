@@ -7,7 +7,6 @@ import {TabNavigator} from './TabNavigator';
 import {Activity} from '../screens/Activity';
 import {Profile} from '../screens/Profile';
 import {ProgressPhoto} from '../screens/ProgressPhoto';
-import NotifeIcon from '../assets/ProfileImg/NotifIcon';
 import {Notification} from '../screens/Notification';
 import {Comparison} from '../screens/Comparison';
 import {Result} from '../screens/Result';
