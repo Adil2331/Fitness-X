@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaLayout} from '../../components/SafeAreaLayout';
 import {
   ScrollView,
@@ -12,9 +12,12 @@ import DetailsNavs from '../../assets/svg/DetailsNavs';
 import {BtnLayout} from '../../components/BtnLayout';
 import {useNavigation} from '@react-navigation/native';
 import {PrivateStackScreenProps} from '../../navigation/Private';
+import {AverageProgess} from './AverageProgess';
+import {Statistic} from './Statistic';
 
 export const Result = () => {
   const {goBack} = useNavigation<PrivateStackScreenProps['navigation']>();
+  const [activeTab, setActiveTab] = useState('photo');
 
   return (
     <SafeAreaLayout top bottom style={styles.container}>
@@ -27,8 +30,50 @@ export const Result = () => {
           <DetailsNavs />
         </TouchableOpacity>
       </View>
-      <ScrollView showsVerticalScrollIndicator={false}></ScrollView>
-      <View style={{marginBottom: 30}}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.tabContainer}>
+          <TouchableOpacity
+            style={[
+              styles.tabBtn,
+              activeTab === 'photo'
+                ? styles.tabActiveBtn
+                : styles.tabInactiveBtn,
+            ]}
+            onPress={() => setActiveTab('photo')}>
+            <Text
+              style={[
+                styles.tabText,
+                activeTab === 'photo'
+                  ? styles.tabActiveText
+                  : styles.tabInactiveText,
+              ]}>
+              Photo
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.tabBtn,
+              activeTab === 'statistic'
+                ? styles.tabActiveBtn
+                : styles.tabInactiveBtn,
+            ]}
+            onPress={() => setActiveTab('statistic')}>
+            <Text
+              style={[
+                styles.tabText,
+                activeTab === 'statistic'
+                  ? styles.tabActiveText
+                  : styles.tabInactiveText,
+              ]}>
+              Statistic
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.mainContainer}>
+          {activeTab === 'photo' ? <AverageProgess /> : <Statistic />}
+        </View>
+      </ScrollView>
+      <View style={styles.bottom}>
         <BtnLayout text="Back to Home" onPress={goBack} />
       </View>
     </SafeAreaLayout>
@@ -65,4 +110,40 @@ const styles = StyleSheet.create({
 
     elevation: 2,
   },
+  tabContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '#fff',
+    borderRadius: 99,
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+    marginTop: 10,
+  },
+  tabBtn: {
+    paddingVertical: 8,
+    borderRadius: 99,
+    width: 130,
+  },
+  tabActiveBtn: {
+    backgroundColor: '#92A3FD',
+  },
+  tabInactiveBtn: {
+    backgroundColor: 'transparent',
+  },
+  tabText: {
+    textAlign: 'center',
+    fontSize: 16,
+  },
+  tabActiveText: {
+    color: 'white',
+    fontWeight: '500',
+  },
+  tabInactiveText: {
+    color: '#ADA4A5',
+    fontWeight: '400',
+  },
+  mainContainer: {
+    marginTop: 30,
+  },
+  bottom: {marginBottom: 30, paddingTop: 15},
 });
