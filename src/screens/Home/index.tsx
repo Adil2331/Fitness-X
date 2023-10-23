@@ -84,162 +84,53 @@ export const Home = () => {
             style={{width: width - 20}}
           />
         </View>
-        <View style={{flexDirection: 'row'}}>
-          <View
-            style={{
-              backgroundColor: 'white',
-              padding: 20,
-              borderRadius: 20,
-              flexDirection: 'row',
-              marginRight: 15,
-              marginLeft: 1,
-              shadowColor: '#000',
-              shadowOffset: {
-                width: 0,
-                height: 1,
-              },
-              shadowOpacity: 0.2,
-              shadowRadius: 1.41,
-
-              elevation: 2,
-            }}>
+        <View style={styles.mode}>
+          <View style={styles.whater}>
             <WaterGraph />
-            <View style={{marginLeft: 10, alignItems: 'flex-start'}}>
-              <WaterText style={{marginLeft: 5, marginBottom: 10}} />
+            <View style={styles.waterInner}>
+              <WaterText style={styles.waterText} />
               <TimeStatus />
             </View>
           </View>
           <View>
-            <View
-              style={{
-                backgroundColor: 'white',
-                padding: 18,
-                borderRadius: 20,
-                marginBottom: 15,
-                marginRight: 1,
-                shadowColor: '#000',
-                shadowOffset: {
-                  width: 0,
-                  height: 1,
-                },
-                shadowOpacity: 0.2,
-                shadowRadius: 1.41,
-
-                elevation: 2,
-              }}>
+            <View style={styles.sleep}>
               <SleepText />
               <SleepStatus />
             </View>
-            <View
-              style={{
-                backgroundColor: 'white',
-                padding: 20,
-                paddingBottom: 0,
-                borderRadius: 18,
-                marginRight: 1,
-                shadowColor: '#000',
-                shadowOffset: {
-                  width: 0,
-                  height: 1,
-                },
-                shadowOpacity: 0.2,
-                shadowRadius: 1.41,
-
-                elevation: 2,
-              }}>
+            <View style={styles.calories}>
               <CaloriesText />
-              <CaloriesStatus style={{marginLeft: 10}} />
+              <CaloriesStatus style={styles.caloriesInner} />
             </View>
           </View>
         </View>
-        <View style={{marginVertical: 30}}>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginBottom: 15,
-            }}>
-            <Text style={{fontSize: 16, fontWeight: '600'}}>
-              Workout Progress
-            </Text>
+        <View style={styles.workout}>
+          <View style={styles.workoutInner}>
+            <Text style={styles.workoutTitle}>Workout Progress</Text>
             <InnerBtn text="Weekly" />
           </View>
-          <View style={{alignItems: 'center'}}>
+          <View style={styles.workoutImg}>
             <Image source={require('../../assets/HomeImg/Graph.png')} />
           </View>
         </View>
         <View>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              marginBottom: 15,
-            }}>
-            <Text style={{fontSize: 16, fontWeight: '600', lineHeight: 24}}>
-              Latest Activity
-            </Text>
+          <View style={styles.latestActivity}>
+            <Text style={styles.latestActivityTitle}>Latest Activity</Text>
             <TouchableOpacity>
-              <Text
-                style={{
-                  color: '#ADA4A5',
-                  fontSize: 12,
-                  fontWeight: '500',
-                  lineHeight: 18,
-                }}>
-                See more
-              </Text>
+              <Text style={styles.latestActivityText}>See more</Text>
             </TouchableOpacity>
           </View>
           {WorkoutItems.map((e, i) => (
-            <View
-              key={i}
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                padding: 15,
-                backgroundColor: '#fff',
-                borderRadius: 16,
-                marginBottom: 15,
-                marginHorizontal: 2,
-                shadowColor: '#000',
-                shadowOffset: {
-                  width: 0,
-                  height: 1,
-                },
-                shadowOpacity: 0.2,
-                shadowRadius: 1.41,
-
-                elevation: 2,
-              }}>
+            <View key={i} style={styles.main}>
               {e.img}
               <View>
-                <Text style={{fontSize: 12, fontWeight: '500', lineHeight: 18}}>
-                  {e.title}
-                </Text>
-                <Text
-                  style={{
-                    fontSize: 10,
-                    fontWeight: '400',
-                    lineHeight: 15,
-                    color: '#A4A9AD',
-                    marginBottom: 9,
-                  }}>
-                  {e.text}
-                </Text>
-                <View
-                  style={{
-                    width: 190,
-                    height: 10,
-                    borderRadius: 50,
-                    backgroundColor: '#f8f8f8',
-                  }}>
+                <Text style={styles.mainTitle}>{e.title}</Text>
+                <Text style={styles.mainText}>{e.text}</Text>
+                <View style={styles.mainLine}>
                   <LinearGradient
                     colors={['#C58BF2', '#92A3FD']}
                     start={{x: 1, y: 0.1}}
                     end={{x: 0.7, y: 0.8}}
-                    style={{width: e.width, height: 10, borderRadius: 50}}
+                    style={[styles.mainLineInner, {width: e.width}]}
                   />
                 </View>
               </View>
@@ -302,5 +193,141 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     lineHeight: 24,
     paddingTop: 30,
+  },
+  mode: {
+    flexDirection: 'row',
+  },
+  whater: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 20,
+    flexDirection: 'row',
+    marginRight: 15,
+    marginLeft: 1,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
+  waterInner: {
+    marginLeft: 10,
+    alignItems: 'flex-start',
+  },
+  waterText: {
+    marginLeft: 5,
+    marginBottom: 10,
+  },
+  sleep: {
+    backgroundColor: 'white',
+    padding: 18,
+    borderRadius: 20,
+    marginBottom: 15,
+    marginRight: 1,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
+  calories: {
+    backgroundColor: 'white',
+    padding: 20,
+    paddingBottom: 0,
+    borderRadius: 18,
+    marginRight: 1,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
+  caloriesInner: {
+    marginLeft: 10,
+  },
+  workout: {
+    marginVertical: 30,
+  },
+  workoutInner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 15,
+  },
+  workoutTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  workoutImg: {
+    alignItems: 'center',
+  },
+  latestActivity: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 15,
+  },
+  latestActivityTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    lineHeight: 24,
+  },
+  latestActivityText: {
+    color: '#ADA4A5',
+    fontSize: 12,
+    fontWeight: '500',
+    lineHeight: 18,
+  },
+  main: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 15,
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    marginBottom: 15,
+    marginHorizontal: 2,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
+  mainTitle: {
+    fontSize: 12,
+    fontWeight: '500',
+    lineHeight: 18,
+  },
+  mainText: {
+    fontSize: 10,
+    fontWeight: '400',
+    lineHeight: 15,
+    color: '#A4A9AD',
+    marginBottom: 9,
+  },
+  mainLine: {
+    width: 190,
+    height: 10,
+    borderRadius: 50,
+    backgroundColor: '#f8f8f8',
+  },
+  mainLineInner: {
+    height: 10,
+    borderRadius: 50,
   },
 });
