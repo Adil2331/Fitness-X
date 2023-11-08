@@ -5,14 +5,18 @@ import {
 import React from 'react';
 import Onboarding from '../screens/Onboarding';
 import {Welcome} from '../screens/Welcome';
-import {Regiter} from '../screens/Regiter';
 import {Goal} from '../screens/Goal';
 import {Login} from '../screens/Login';
 import {GoToHome} from '../screens/GoToHome';
+import {Regiter} from '../screens/Regiter';
 
 type PublicStackParamList = {
   Welcome: undefined;
   Onboarding: undefined;
+  Register: undefined;
+  Goal: undefined;
+  Login: undefined;
+  GoToHome: undefined;
 };
 export type PublicStackScreenProps =
   NativeStackScreenProps<PublicStackParamList>;

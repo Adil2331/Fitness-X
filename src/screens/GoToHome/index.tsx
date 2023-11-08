@@ -3,11 +3,11 @@ import {SafeAreaLayout} from '../../components/SafeAreaLayout';
 import GoHomeImg from '../../assets/svg/GoHome-Img';
 import {StyleSheet, Text, View} from 'react-native';
 import {BtnLayout} from '../../components/BtnLayout';
-import {useDispatch} from 'react-redux';
 import {setLogin} from '../../redux/loginSlice';
+import {useAppDispatch} from '../../redux/store';
 
 export const GoToHome = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   return (
     <SafeAreaLayout top bottom style={styles.container}>
       <View style={styles.headerContainer}>

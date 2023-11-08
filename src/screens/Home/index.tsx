@@ -8,10 +8,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
-import NotificationIcon from '../../assets/svg/NotificationIcon';
+import LinearGradient from 'react-native-linear-gradient';
 import {useNavigation} from '@react-navigation/native';
-import {PrivateStackScreenProps} from '../../navigation/Private';
+
+// components
+import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import {InnerBtn} from '../../components/InnerBtn';
+
+// assets
+import NotificationIcon from '../../assets/svg/NotificationIcon';
 import WaterGraph from '../../assets/HomeImg/WaterGraph';
 import TimeStatus from '../../assets/HomeImg/TimeStatus';
 import WaterText from '../../assets/HomeImg/WaterText';
@@ -19,16 +24,26 @@ import SleepText from '../../assets/HomeImg/SleepText';
 import SleepStatus from '../../assets/HomeImg/SleepStatus';
 import CaloriesText from '../../assets/HomeImg/CaloriesText';
 import CaloriesStatus from '../../assets/HomeImg/CaloriesStatus';
-import {InnerBtn} from '../../components/InnerBtn';
 import WorkoutBtn from '../../assets/HomeImg/WorkoutBtn';
-import LinearGradient from 'react-native-linear-gradient';
 import HomeActivity1 from '../../assets/HomeImg/HomeActivity1';
 import HomeActivity2 from '../../assets/HomeImg/HomeActivity2';
 import HomeActivity3 from '../../assets/HomeImg/HomeActivity3';
 
+// navigation
+import {PrivateStackScreenProps} from '../../navigation/Private';
+
 const width = Dimensions.get('screen').width;
 
-const WorkoutItems = [
+// DRY Dont Repeat Yourself
+
+interface IWorkoutItme {
+  img: React.JSX.Element;
+  title: string;
+  text: string;
+  width: number;
+}
+
+const WorkoutItems: IWorkoutItme[] = [
   {
     img: <HomeActivity1 />,
     title: 'Fullbody Workout',
@@ -49,7 +64,7 @@ const WorkoutItems = [
   },
 ];
 
-export const Home = () => {
+export const Home: React.FC = () => {
   const {navigate} = useNavigation<PrivateStackScreenProps['navigation']>();
   return (
     <SafeAreaLayout style={styles.container} bottom top>
@@ -106,7 +121,7 @@ export const Home = () => {
         <View style={styles.workout}>
           <View style={styles.workoutInner}>
             <Text style={styles.workoutTitle}>Workout Progress</Text>
-            <InnerBtn text="Weekly" />
+            <InnerBtn text="Weekly" onPress={() => {}} />
           </View>
           <View style={styles.workoutImg}>
             <Image source={require('../../assets/HomeImg/Graph.png')} />

@@ -34,17 +34,20 @@ export const SafeAreaLayout: FC<PropsWithChildren<SafeAreaLayoutProps>> = ({
 }) => {
   const {top: up, bottom: down} = useSafeAreaInsets();
 
+  const bottomStyle = {
+    paddingBottom: bottom ? 20 : 0,
+  };
+
   return bgGradient && colors ? (
     <LinearGradient
       colors={colors}
       start={start}
       end={end}
-      style={[top && {paddingTop: up}, bottom && {paddingBottom: down}, style]}>
+      style={[top && {paddingTop: up}, bottomStyle, style]}>
       {children}
     </LinearGradient>
   ) : (
-    <View
-      style={[top && {paddingTop: up}, bottom && {paddingBottom: down}, style]}>
+    <View style={[top && {paddingTop: up}, bottomStyle, style]}>
       {children}
     </View>
   );

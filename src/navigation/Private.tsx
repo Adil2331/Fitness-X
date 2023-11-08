@@ -10,7 +10,15 @@ import {ProgressPhoto} from '../screens/ProgressPhoto';
 import {Notification} from '../screens/Notification';
 import {Comparison} from '../screens/Comparison';
 import {Result} from '../screens/Result';
-type PrivateStackParamList = {};
+type PrivateStackParamList = {
+  TabNavigator: undefined;
+  Activity: undefined;
+  Profile: undefined;
+  ProgressPhoto: undefined;
+  Notification: undefined;
+  Comparison: undefined;
+  Result: undefined;
+};
 export type PrivateStackScreenProps =
   NativeStackScreenProps<PrivateStackParamList>;
 

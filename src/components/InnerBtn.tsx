@@ -22,9 +22,6 @@ export const InnerBtn: FC<InnerBtnProps> = ({onPress, text}) => {
 const styles = StyleSheet.create({
   btn: {
     width: 80,
-    // height: 30,
-    // alignItems: 'center',
-    // justifyContent: 'center'
   },
   welcomeBtn: {
     borderRadius: 99,
@@ -32,8 +29,6 @@ const styles = StyleSheet.create({
   btnText: {
     textAlign: 'center',
     paddingVertical: 8,
-    // justifyContent: 'center',
-
     color: '#FFF',
     fontSize: 12,
     fontWeight: '500',

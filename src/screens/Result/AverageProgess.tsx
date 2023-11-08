@@ -2,7 +2,13 @@ import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-const PhotoItems = [
+interface IPhotoItem {
+  title: string;
+  firstImg: any;
+  secondImg: any;
+}
+
+const PhotoItems: IPhotoItem[] = [
   {
     title: 'Front Facing',
     firstImg: require('../../assets/AverageProgress/Average1.png'),

@@ -15,7 +15,12 @@ import CalendarIcon from '../../assets/svg/CalendarIcon';
 import Arrow from '../../assets/ProfileImg/Arrow';
 import {BtnLayout} from '../../components/BtnLayout';
 
-const CompareItems = [
+interface ICompareItem {
+  title: string;
+  text: string;
+}
+
+const CompareItems: ICompareItem[] = [
   {title: 'Select Month 1', text: 'May'},
   {title: 'Select Month 2', text: 'Select Month'},
 ];
@@ -51,7 +56,7 @@ export const Comparison = () => {
         </View>
       </ScrollView>
       <View style={styles.bottom}>
-        <BtnLayout text="Compare" />
+        <BtnLayout text="Compare" onPress={() => {}} />
       </View>
     </SafeAreaLayout>
   );

@@ -17,7 +17,13 @@ import FirstPerson from '../../assets/svg/FirstPerson';
 import SecondPerson from '../../assets/svg/SecondPerson';
 import MoreIcon from '../../assets/svg/MoreIcon';
 
-const ActivityItems = [
+interface IActivityItem {
+  img: React.JSX.Element;
+  title: string;
+  text: string;
+}
+
+const ActivityItems: IActivityItem[] = [
   {
     img: <FirstPerson />,
     title: 'Drinking 300ml Water',
@@ -48,7 +54,7 @@ export const Activity = () => {
         <View style={styles.mainContainer}>
           <View style={styles.mainHeader}>
             <Text style={styles.mainTitle}>Activity Progress</Text>
-            <InnerBtn text="Weekly" />
+            <InnerBtn text="Weekly" onPress={() => {}} />
           </View>
           <View style={styles.mainInner}>
             <Image

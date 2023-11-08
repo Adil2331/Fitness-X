@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Image,
   ScrollView,
   StyleSheet,
   Switch,
@@ -25,20 +24,35 @@ import FirstPerson from '../../assets/svg/FirstPerson';
 import {useDispatch} from 'react-redux';
 import {setLogin} from '../../redux/loginSlice';
 
-const Data = [
+interface IDataItem {
+  title: string;
+  text: string;
+}
+
+interface IAccountItem {
+  img: React.JSX.Element;
+  text: string;
+}
+
+interface IOthertItem {
+  img: React.JSX.Element;
+  text: string;
+}
+
+const Data: IDataItem[] = [
   {title: '180cm', text: 'Height'},
   {title: '85kg', text: 'Weight'},
   {title: '22yo', text: 'Age'},
 ];
 
-const AcountItems = [
+const AcountItems: IAccountItem[] = [
   {img: <ProfileIcon />, text: 'Personal Data'},
   {img: <Achievement />, text: 'Achievement'},
   {img: <ActivityIcon />, text: 'Activity History'},
   {img: <WorkoutIcon />, text: 'Workout Progress'},
 ];
 
-const Other = [
+const Other: IOthertItem[] = [
   {img: <MessageIcon />, text: 'Contact Us'},
   {img: <PrivacyIcon />, text: 'Privacy Policy'},
   {img: <SettingIcon />, text: 'Settings'},

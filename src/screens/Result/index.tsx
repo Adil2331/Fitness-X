@@ -145,5 +145,5 @@ const styles = StyleSheet.create({
   mainContainer: {
     marginTop: 30,
   },
-  bottom: {marginBottom: 30, paddingTop: 15},
+  bottom: {marginBottom: 20, paddingTop: 20},
 });

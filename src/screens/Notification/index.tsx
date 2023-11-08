@@ -17,7 +17,13 @@ import NotificationIcon3 from '../../assets/Notification/NotificationIcon3';
 import NotificationIcon4 from '../../assets/Notification/NotificationIcon4';
 import MoreIcon from '../../assets/svg/MoreIcon';
 
-const Data = [
+interface IItem {
+  img: React.JSX.Element;
+  title: string;
+  text: string;
+}
+
+const Data: IItem[] = [
   {
     img: <NotificationIcon1 />,
     title: 'Hey, it’s time for lunch',

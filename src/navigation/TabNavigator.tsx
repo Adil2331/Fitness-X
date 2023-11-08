@@ -19,7 +19,7 @@ export const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color, size}) => {
+        tabBarIcon: ({focused}) => {
           if (route.name === 'Home') {
             return focused ? <HomeNavActive /> : <HomeNav />;
           } else if (route.name === 'Activity') {
@@ -32,7 +32,6 @@ export const TabNavigator = () => {
         },
         tabBarShowLabel: false,
         tabBarStyle: {
-          // height: 70,
           paddingTop: 30,
           paddingBottom: 30,
         },

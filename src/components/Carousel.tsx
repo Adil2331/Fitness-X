@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dimensions} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {
   Carousel,
   DOTS_ANIMATION_TYPE,
@@ -13,7 +13,6 @@ const data: SlideItem[] = [
   {id: '1', image: require('../assets/Card-Goals.png')},
   {id: '2', image: require('../assets/Card-Goals2.png')},
   {id: '3', image: require('../assets/Card-Goals3.png')},
-  //   {id: '4', image: require('../assets/Card-Goals.png')},
 ];
 
 const SLIDE_WIDTH = width - width * 0.3;
@@ -37,12 +36,16 @@ export const SimpleCarousel = () => {
       slideStyles={{
         height: height * 0.6,
       }}
-      imageStyles={{
-        width: '100%',
-        height: '100%',
-        resizeMode: 'contain',
-      }}
+      imageStyles={styles.img}
       containerWidth
     />
   );
 };
+
+const styles = StyleSheet.create({
+  img: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'contain',
+  },
+});

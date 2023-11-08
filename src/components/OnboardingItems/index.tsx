@@ -24,7 +24,15 @@ type IOnboardingItems = {
   setState: (e: number) => void;
 };
 
-const OnboardingData = [
+interface IDataItem {
+  id: number;
+  img: React.JSX.Element;
+  title: string;
+  description: string;
+  icon: React.JSX.Element;
+}
+
+const OnboardingData: IDataItem[] = [
   {
     id: 0,
     img: <OnbGroup1 width={width} />,
