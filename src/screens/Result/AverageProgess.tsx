@@ -1,11 +1,12 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import {ImageSourcePropType} from 'react-native';
 
 interface IPhotoItem {
   title: string;
-  firstImg: any;
-  secondImg: any;
+  firstImg: ImageSourcePropType;
+  secondImg: ImageSourcePropType;
 }
 
 const PhotoItems: IPhotoItem[] = [
