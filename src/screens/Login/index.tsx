@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaLayout} from '../../components/SafeAreaLayout';
 import {
+  Platform,
   StyleSheet,
   Text,
   TextInput,
@@ -90,9 +91,9 @@ export const Login = () => {
       <View style={styles.bottomContainer}>
         <BtnLayout onPress={() => navigate('GoToHome')} text="Login" />
         <View style={styles.orItemContainer}>
-          <View style={styles.lineItem}></View>
+          <View style={styles.lineItem} />
           <Text>Or</Text>
-          <View style={styles.lineItem}></View>
+          <View style={styles.lineItem} />
         </View>
         <View style={styles.socialContainer}>
           <TouchableOpacity style={styles.socialItems}>

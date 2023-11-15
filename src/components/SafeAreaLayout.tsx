@@ -32,7 +32,8 @@ export const SafeAreaLayout: FC<PropsWithChildren<SafeAreaLayoutProps>> = ({
   start,
   end,
 }) => {
-  const {top: up, bottom: down} = useSafeAreaInsets();
+  // const {top: up, bottom: down} = useSafeAreaInsets();
+  const {top: up} = useSafeAreaInsets();
 
   const bottomStyle = {
     paddingBottom: bottom ? 20 : 0,
