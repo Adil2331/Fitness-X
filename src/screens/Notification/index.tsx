@@ -7,8 +7,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import BackNavs from '../../assets/svg/BackNavs';
-import DetailsNavs from '../../assets/svg/DetailsNavs';
 import {useNavigation} from '@react-navigation/native';
 import {PrivateStackScreenProps} from '../../navigation/Private';
 import NotificationIcon1 from '../../assets/Notification/NotificationIcon1';
@@ -16,6 +14,7 @@ import NotificationIcon2 from '../../assets/Notification/NotificationIcon2';
 import NotificationIcon3 from '../../assets/Notification/NotificationIcon3';
 import NotificationIcon4 from '../../assets/Notification/NotificationIcon4';
 import MoreIcon from '../../assets/svg/MoreIcon';
+import {HeaderLayout} from '../../components/HeaderLayout';
 
 interface IItem {
   img: React.JSX.Element;
@@ -61,15 +60,7 @@ export const Notification = () => {
 
   return (
     <SafeAreaLayout top bottom style={styles.container}>
-      <View style={styles.headerContainer}>
-        <TouchableOpacity style={styles.headerBtn} onPress={goBack}>
-          <BackNavs />
-        </TouchableOpacity>
-        <Text style={styles.title}>Notification</Text>
-        <TouchableOpacity style={styles.headerBtn}>
-          <DetailsNavs />
-        </TouchableOpacity>
-      </View>
+      <HeaderLayout text={'Notification'} onPress={goBack} />
       <ScrollView showsVerticalScrollIndicator={false}>
         {Data.map((e, i) => (
           <TouchableOpacity
@@ -99,28 +90,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f8f8',
     paddingHorizontal: 30,
     paddingBottom: 0,
-  },
-  headerContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingTop: 8,
-    paddingBottom: 15,
-  },
-  title: {
-    fontSize: 16,
-    fontWeight: '700',
-    lineHeight: 24,
-  },
-  headerBtn: {
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 2,
   },
   main: {
     flexDirection: 'row',
