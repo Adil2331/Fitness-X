@@ -13,19 +13,19 @@ export const TodayTarget = () => {
         <View style={styles.headerContainer}>
           <Text style={styles.headerTitle}>Today Target</Text>
           <TouchableOpacity>
-            <Image source={require('../../assets/ButtonPlus.png')} />
+            <Image source={require('../../assets/images/ButtonPlus.png')} />
           </TouchableOpacity>
         </View>
         <View style={styles.items}>
           <View style={styles.itemsInner}>
-            <Image source={require('../../assets/glass.png')} />
+            <Image source={require('../../assets/images/glass.png')} />
             <View style={styles.innerContainer}>
               <Text style={styles.innerTitle}>8L</Text>
               <Text style={styles.innerText}>Water Intake</Text>
             </View>
           </View>
           <View style={styles.itemsInner}>
-            <Image source={require('../../assets/boots.png')} />
+            <Image source={require('../../assets/images/boots.png')} />
             <View style={styles.innerContainer}>
               <Text style={styles.innerTitle}>2400</Text>
               <Text style={styles.innerText}>Foot steps</Text>

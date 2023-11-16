@@ -9,20 +9,20 @@ export const HomeHeader = () => {
     <>
       <View style={styles.imgConatiner}>
         <Image
-          source={require('../../assets/HomeImg/HomeBanner-1.png')}
+          source={require('../../assets/icons/HomeImg/HomeBanner-1.png')}
           style={{width: spaces.windowWidth - 15}}
         />
       </View>
       <View style={styles.imgConatiner}>
         <Image
-          source={require('../../assets/HomeImg/Action.png')}
+          source={require('../../assets/icons/HomeImg/Action.png')}
           style={{width: spaces.windowWidth - 63}}
         />
       </View>
       <Text style={styles.adtivityTitle}>Activity Status</Text>
       <View style={styles.imgConatiner}>
         <Image
-          source={require('../../assets/HomeImg/HomeStatus.png')}
+          source={require('../../assets/icons/HomeImg/HomeStatus.png')}
           style={{width: spaces.windowWidth - 20}}
         />
       </View>

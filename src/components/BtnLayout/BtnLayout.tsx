@@ -1,10 +1,12 @@
 import React, {FC} from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+
 type BtnLayoutProps = {
   onPress: () => void;
   text: string;
 };
+
 export const BtnLayout: FC<BtnLayoutProps> = ({onPress, text}) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.btn}>

@@ -2,13 +2,13 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
 // assets
-import WaterGraph from '../../assets/HomeImg/WaterGraph';
-import WaterText from '../../assets/HomeImg/WaterText';
-import TimeStatus from '../../assets/HomeImg/TimeStatus';
-import SleepText from '../../assets/HomeImg/SleepText';
-import SleepStatus from '../../assets/HomeImg/SleepStatus';
-import CaloriesText from '../../assets/HomeImg/CaloriesText';
-import CaloriesStatus from '../../assets/HomeImg/CaloriesStatus';
+import WaterGraph from '../../assets/icons/HomeImg/WaterGraph';
+import WaterText from '../../assets/icons/HomeImg/WaterText';
+import TimeStatus from '../../assets/icons/HomeImg/TimeStatus';
+import SleepText from '../../assets/icons/HomeImg/SleepText';
+import SleepStatus from '../../assets/icons/HomeImg/SleepStatus';
+import CaloriesText from '../../assets/icons/HomeImg/CaloriesText';
+import CaloriesStatus from '../../assets/icons/HomeImg/CaloriesStatus';
 
 export const HomeMode = () => {
   return (

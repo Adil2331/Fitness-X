@@ -2,10 +2,10 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 // assets
-import Arrow from '../../assets/ProfileImg/Arrow';
-import MessageIcon from '../../assets/ProfileImg/MessegeIcon';
-import PrivacyIcon from '../../assets/ProfileImg/PrivacyIcon';
-import SettingIcon from '../../assets/ProfileImg/SettingIcon';
+import Arrow from '../../assets/icons/ProfileImg/Arrow';
+import MessageIcon from '../../assets/icons/ProfileImg/MessegeIcon';
+import PrivacyIcon from '../../assets/icons/ProfileImg/PrivacyIcon';
+import SettingIcon from '../../assets/icons/ProfileImg/SettingIcon';
 
 interface IOthertItem {
   img: React.JSX.Element;

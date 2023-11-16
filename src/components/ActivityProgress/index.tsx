@@ -16,7 +16,7 @@ export const ActivityProgress = () => {
       </View>
       <View style={styles.mainInner}>
         <Image
-          source={require('../../assets/Graph.png')}
+          source={require('../../assets/images/Graph.png')}
           style={{width: spaces.windowWidth}}
         />
       </View>

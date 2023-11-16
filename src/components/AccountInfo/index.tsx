@@ -2,11 +2,11 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 // assets
-import Arrow from '../../assets/ProfileImg/Arrow';
-import ProfileIcon from '../../assets/ProfileImg/PtofileIcon';
-import Achievement from '../../assets/ProfileImg/Achievement';
-import ActivityIcon from '../../assets/ProfileImg/ActivityIcon';
-import WorkoutIcon from '../../assets/ProfileImg/WorkoutIcon';
+import Arrow from '../../assets/icons/ProfileImg/Arrow';
+import ProfileIcon from '../../assets/icons/ProfileImg/PtofileIcon';
+import Achievement from '../../assets/icons/ProfileImg/Achievement';
+import ActivityIcon from '../../assets/icons/ProfileImg/ActivityIcon';
+import WorkoutIcon from '../../assets/icons/ProfileImg/WorkoutIcon';
 
 interface IAccountItem {
   img: React.JSX.Element;

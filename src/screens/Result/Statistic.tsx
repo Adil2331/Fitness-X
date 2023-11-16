@@ -22,7 +22,7 @@ export const Statistic = () => {
   return (
     <View>
       <View style={styles.container}>
-        <Image source={require('../../assets/StatisticGraph.png')} />
+        <Image source={require('../../assets/images/StatisticGraph.png')} />
       </View>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>May</Text>

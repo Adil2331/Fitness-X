@@ -13,7 +13,7 @@ export const Welcome: FC<PublicStackScreenProps> = ({navigation}) => {
       <View style={styles.container}>
         <Image
           style={styles.welcomeImg}
-          source={require('../../assets/FitnessX.png')}
+          source={require('../../assets/images/FitnessX.png')}
         />
         <Text style={styles.welcomeText}>Everybody Can Train</Text>
       </View>

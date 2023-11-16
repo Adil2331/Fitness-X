@@ -1,15 +1,18 @@
+import React from 'react';
 import {
   NativeStackScreenProps,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
-import React from 'react';
 import {TabNavigator} from './TabNavigator';
+
+// screens
 import {Activity} from '../screens/Activity';
 import {Profile} from '../screens/Profile';
 import {ProgressPhoto} from '../screens/ProgressPhoto';
 import {Notification} from '../screens/Notification';
 import {Comparison} from '../screens/Comparison';
 import {Result} from '../screens/Result';
+
 type PrivateStackParamList = {
   TabNavigator: undefined;
   Activity: undefined;

@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Switch, Text, View} from 'react-native';
 
 // assets
-import NotifeIcon from '../../assets/ProfileImg/NotifIcon';
+import NotifeIcon from '../../assets/icons/ProfileImg/NotifIcon';
 
 export const NotificationInfo = () => {
   return (

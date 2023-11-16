@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
 // assets
-import GoHomeImg from '../../assets/svg/GoHome-Img';
+import GoHomeImg from '../../assets/icons/GoHome-Img';
 
 // components
 import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';

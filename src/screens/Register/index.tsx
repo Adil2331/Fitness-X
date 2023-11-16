@@ -12,11 +12,11 @@ import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
 
 // assets
-import FirstName from '../../assets/svg/FirstName';
-import Email from '../../assets/svg/Email';
-import Password from '../../assets/svg/Password';
-import GoogleIcon from '../../assets/svg/Google-icon';
-import FacebookIcon from '../../assets/svg/Facebook-icon';
+import FirstName from '../../assets/icons/FirstName';
+import Email from '../../assets/icons/Email';
+import Password from '../../assets/icons/Password';
+import GoogleIcon from '../../assets/icons/Google-icon';
+import FacebookIcon from '../../assets/icons/Facebook-icon';
 
 // components
 import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';

@@ -1,17 +1,21 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
+// assets
+import HomeNav from '../assets/icons/HomeNav';
+import ProfileNav from '../assets/icons/ProfileNav';
+import ActivityNav from '../assets/icons/ActivityNav';
+import HomeNavActive from '../assets/icons/HomeNavActive';
+import ProfileNavActive from '../assets/icons/ProvileNavActive';
+import CameraNavActive from '../assets/icons/CameraNavActive';
+import CameraNav from '../assets/icons/CameraNav';
+import ActivityNavActive from '../assets/icons/ActiveNavActive';
+
+// screens
+import {ProgressPhoto} from '../screens/ProgressPhoto';
 import {Home} from '../screens/Home';
 import {Activity} from '../screens/Activity';
 import {Profile} from '../screens/Profile';
-import HomeNav from '../assets/svg/HomeNav';
-import ProfileNav from '../assets/svg/ProfileNav';
-import ActivityNav from '../assets/svg/ActivityNav';
-import HomeNavActive from '../assets/svg/HomeNavActive';
-import ProfileNavActive from '../assets/svg/ProvileNavActive';
-import {ProgressPhoto} from '../screens/ProgressPhoto';
-import CameraNavActive from '../assets/svg/CameraNavActive';
-import CameraNav from '../assets/svg/CameraNav';
-import ActivityNavActive from '../assets/svg/ActiveNavActive';
 
 const Tab = createBottomTabNavigator();
 

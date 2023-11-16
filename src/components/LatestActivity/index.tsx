@@ -2,9 +2,9 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 // assets
-import MoreIcon from '../../assets/svg/MoreIcon';
-import FirstPerson from '../../assets/svg/FirstPerson';
-import SecondPerson from '../../assets/svg/SecondPerson';
+import MoreIcon from '../../assets/icons/MoreIcon';
+import FirstPerson from '../../assets/icons/FirstPerson';
+import SecondPerson from '../../assets/icons/SecondPerson';
 
 interface IActivityItem {
   img: React.JSX.Element;

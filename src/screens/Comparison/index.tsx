@@ -11,10 +11,10 @@ import {useNavigation} from '@react-navigation/native';
 import {PrivateStackScreenProps} from '../../navigation/Private';
 
 // assets
-import BackNavs from '../../assets/svg/BackNavs';
-import DetailsNavs from '../../assets/svg/DetailsNavs';
-import CalendarIcon from '../../assets/svg/CalendarIcon';
-import Arrow from '../../assets/ProfileImg/Arrow';
+import BackNavs from '../../assets/icons/BackNavs';
+import DetailsNavs from '../../assets/icons/DetailsNavs';
+import CalendarIcon from '../../assets/icons/CalendarIcon';
+import Arrow from '../../assets/icons/ProfileImg/Arrow';
 
 // components
 import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';

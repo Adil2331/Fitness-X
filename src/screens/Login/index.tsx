@@ -13,10 +13,10 @@ import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
 
 // assets
-import GoogleIcon from '../../assets/svg/Google-icon';
-import FacebookIcon from '../../assets/svg/Facebook-icon';
-import Password from '../../assets/svg/Password';
-import Email from '../../assets/svg/Email';
+import GoogleIcon from '../../assets/icons/Google-icon';
+import FacebookIcon from '../../assets/icons/Facebook-icon';
+import Password from '../../assets/icons/Password';
+import Email from '../../assets/icons/Email';
 
 // components
 import {BtnLayout} from '../../components/BtnLayout/BtnLayout';

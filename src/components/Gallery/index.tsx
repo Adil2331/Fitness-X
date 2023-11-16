@@ -13,12 +13,12 @@ import {PrivateStackScreenProps} from '../../navigation/Private';
 export const Gallery = () => {
   const {navigate} = useNavigation<PrivateStackScreenProps['navigation']>();
   const obj = {
-    1: require('../../assets/Photo1.png'),
-    2: require('../../assets/Photo2.png'),
-    3: require('../../assets/Photo3.png'),
-    4: require('../../assets/Photo6.png'),
-    5: require('../../assets/Photo5.png'),
-    6: require('../../assets/Photo4.png'),
+    1: require('../../assets/images/Photo1.png'),
+    2: require('../../assets/images/Photo2.png'),
+    3: require('../../assets/images/Photo3.png'),
+    5: require('../../assets/images/Photo5.png'),
+    4: require('../../assets/images/Photo6.png'),
+    6: require('../../assets/images/Photo4.png'),
   };
   const arr = Object.values(obj);
   return (

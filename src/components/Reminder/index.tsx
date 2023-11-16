@@ -2,8 +2,8 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 // assets
-import Clock from '../../assets/ProgressPhotoImg/Clock';
-import CloseIcon from '../../assets/svg/Close';
+import Clock from '../../assets/icons/ProgressPhotoImg/Clock';
+import CloseIcon from '../../assets/icons/Close';
 
 export const Reminder = () => {
   return (

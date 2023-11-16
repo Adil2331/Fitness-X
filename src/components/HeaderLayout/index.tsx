@@ -2,8 +2,8 @@ import React, {FC} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 // assets
-import BackNavs from '../../assets/svg/BackNavs';
-import DetailsNavs from '../../assets/svg/DetailsNavs';
+import BackNavs from '../../assets/icons/BackNavs';
+import DetailsNavs from '../../assets/icons/DetailsNavs';
 
 type HeaderLayoutProps = {
   onPress: () => void;

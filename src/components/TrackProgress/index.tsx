@@ -3,7 +3,7 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 // assets
-import CalendarIcon from '../../assets/ProgressPhotoImg/Calendar';
+import CalendarIcon from '../../assets/icons/ProgressPhotoImg/Calendar';
 
 export const TrackProgress = () => {
   return (

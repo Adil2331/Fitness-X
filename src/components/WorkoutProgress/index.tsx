@@ -12,7 +12,7 @@ export const WorkoutProgress = () => {
         <InnerBtn text="Weekly" onPress={() => {}} />
       </View>
       <View style={styles.workoutImg}>
-        <Image source={require('../../assets/HomeImg/Graph.png')} />
+        <Image source={require('../../assets/icons/HomeImg/Graph.png')} />
       </View>
     </View>
   );

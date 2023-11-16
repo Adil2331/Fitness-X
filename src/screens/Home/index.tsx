@@ -10,7 +10,7 @@ import {useNavigation} from '@react-navigation/native';
 import {PrivateStackScreenProps} from '../../navigation/Private';
 
 // assets
-import NotificationIcon from '../../assets/svg/NotificationIcon';
+import NotificationIcon from '../../assets/icons/NotificationIcon';
 
 // components
 import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';

@@ -1,8 +1,10 @@
+import React from 'react';
 import {
   NativeStackScreenProps,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
-import React from 'react';
+
+// screens
 import Onboarding from '../screens/Onboarding';
 import {Welcome} from '../screens/Welcome';
 import {Goal} from '../screens/Goal';

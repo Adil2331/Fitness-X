@@ -3,10 +3,10 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 // assets
-import WorkoutBtn from '../../assets/HomeImg/WorkoutBtn';
-import HomeActivity1 from '../../assets/HomeImg/HomeActivity1';
-import HomeActivity2 from '../../assets/HomeImg/HomeActivity2';
-import HomeActivity3 from '../../assets/HomeImg/HomeActivity3';
+import WorkoutBtn from '../../assets/icons/HomeImg/WorkoutBtn';
+import HomeActivity1 from '../../assets/icons/HomeImg/HomeActivity1';
+import HomeActivity2 from '../../assets/icons/HomeImg/HomeActivity2';
+import HomeActivity3 from '../../assets/icons/HomeImg/HomeActivity3';
 
 interface IWorkoutItem {
   img: React.JSX.Element;

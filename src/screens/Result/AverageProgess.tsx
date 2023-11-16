@@ -12,23 +12,23 @@ interface IPhotoItem {
 const PhotoItems: IPhotoItem[] = [
   {
     title: 'Front Facing',
-    firstImg: require('../../assets/AverageProgress/Average1.png'),
-    secondImg: require('../../assets/AverageProgress/Average2.png'),
+    firstImg: require('../../assets/images/AverageProgress/Average1.png'),
+    secondImg: require('../../assets/images/AverageProgress/Average2.png'),
   },
   {
     title: 'Back Facing',
-    firstImg: require('../../assets/AverageProgress/Average3.png'),
-    secondImg: require('../../assets/AverageProgress/Average4.png'),
+    firstImg: require('../../assets/images/AverageProgress/Average3.png'),
+    secondImg: require('../../assets/images/AverageProgress/Average4.png'),
   },
   {
     title: 'Left Facing',
-    firstImg: require('../../assets/AverageProgress/Average5.png'),
-    secondImg: require('../../assets/AverageProgress/Average6.png'),
+    firstImg: require('../../assets/images/AverageProgress/Average5.png'),
+    secondImg: require('../../assets/images/AverageProgress/Average6.png'),
   },
   {
     title: 'Right Facing',
-    firstImg: require('../../assets/AverageProgress/Average7.png'),
-    secondImg: require('../../assets/AverageProgress/Average8.png'),
+    firstImg: require('../../assets/images/AverageProgress/Average7.png'),
+    secondImg: require('../../assets/images/AverageProgress/Average8.png'),
   },
 ];
 

@@ -4,14 +4,14 @@ import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
 
 // assets
-import OnbGroup1 from '../../assets/svg/OnbGroup1';
-import Btn1 from '../../assets/svg/Btn1';
-import Btn2 from '../../assets/svg/Btn2';
-import Btn3 from '../../assets/svg/Btn3';
-import Btn4 from '../../assets/svg/Btn4';
-import OnbGroup2 from '../../assets/svg/OnbGroup2';
-import OnbGroup3 from '../../assets/svg/OnbGroup3';
-import OnbGroup4 from '../../assets/svg/OnbGroup4';
+import OnbGroup1 from '../../assets/icons/OnbGroup1';
+import Btn1 from '../../assets/icons/Btn1';
+import Btn2 from '../../assets/icons/Btn2';
+import Btn3 from '../../assets/icons/Btn3';
+import Btn4 from '../../assets/icons/Btn4';
+import OnbGroup2 from '../../assets/icons/OnbGroup2';
+import OnbGroup3 from '../../assets/icons/OnbGroup3';
+import OnbGroup4 from '../../assets/icons/OnbGroup4';
 
 // components
 import {SafeAreaLayout} from '../SafeAreaLayout/SafeAreaLayout';
