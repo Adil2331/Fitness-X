@@ -36,7 +36,7 @@ export const SafeAreaLayout: FC<PropsWithChildren<SafeAreaLayoutProps>> = ({
   const {top: up} = useSafeAreaInsets();
 
   const bottomStyle = {
-    paddingBottom: bottom ? 20 : 0,
+    paddingBottom: bottom ? 25 : 0,
   };
 
   return bgGradient && colors ? (

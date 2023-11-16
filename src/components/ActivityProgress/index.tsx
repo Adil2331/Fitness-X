@@ -1,8 +1,7 @@
 import React from 'react';
-import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import {InnerBtn} from '../InnerBtn';
-
-const width = Dimensions.get('screen').width;
+import {spaces} from '../../theme';
 
 export const ActivityProgress = () => {
   return (
@@ -14,7 +13,7 @@ export const ActivityProgress = () => {
       <View style={styles.mainInner}>
         <Image
           source={require('../../assets/Graph.png')}
-          style={{width: width}}
+          style={{width: spaces.windowWidth}}
         />
       </View>
     </View>

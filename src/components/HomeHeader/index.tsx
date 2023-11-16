@@ -1,7 +1,6 @@
 import React from 'react';
-import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
-
-const width = Dimensions.get('screen').width;
+import {Image, StyleSheet, Text, View} from 'react-native';
+import {spaces} from '../../theme';
 
 export const HomeHeader = () => {
   return (
@@ -9,20 +8,20 @@ export const HomeHeader = () => {
       <View style={styles.imgConatiner}>
         <Image
           source={require('../../assets/HomeImg/HomeBanner-1.png')}
-          style={{width: width - 15}}
+          style={{width: spaces.windowWidth - 15}}
         />
       </View>
       <View style={styles.imgConatiner}>
         <Image
           source={require('../../assets/HomeImg/Action.png')}
-          style={{width: width - 63}}
+          style={{width: spaces.windowWidth - 63}}
         />
       </View>
       <Text style={styles.adtivityTitle}>Activity Status</Text>
       <View style={styles.imgConatiner}>
         <Image
           source={require('../../assets/HomeImg/HomeStatus.png')}
-          style={{width: width - 20}}
+          style={{width: spaces.windowWidth - 20}}
         />
       </View>
     </>

@@ -1,11 +1,5 @@
 import React, {FC} from 'react';
-import {
-  Dimensions,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import OnbGroup1 from '../../assets/svg/OnbGroup1';
 import Btn1 from '../../assets/svg/Btn1';
 import Btn2 from '../../assets/svg/Btn2';
@@ -17,7 +11,7 @@ import OnbGroup4 from '../../assets/svg/OnbGroup4';
 import {SafeAreaLayout} from '../SafeAreaLayout';
 import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
-const {width} = Dimensions.get('window');
+import {spaces} from '../../theme';
 
 type IOnboardingItems = {
   state: number;
@@ -35,7 +29,7 @@ interface IDataItem {
 const OnboardingData: IDataItem[] = [
   {
     id: 0,
-    img: <OnbGroup1 width={width} />,
+    img: <OnbGroup1 width={spaces.windowWidth} />,
     title: 'Track Your Goal',
     description:
       "Don't worry if you have trouble determining your goals, We can help you determine your goals and track your goals",
@@ -43,7 +37,7 @@ const OnboardingData: IDataItem[] = [
   },
   {
     id: 1,
-    img: <OnbGroup2 width={width} />,
+    img: <OnbGroup2 width={spaces.windowWidth} />,
     title: 'Get Burn',
     description:
       'Let’s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever',
@@ -51,7 +45,7 @@ const OnboardingData: IDataItem[] = [
   },
   {
     id: 2,
-    img: <OnbGroup3 width={width} />,
+    img: <OnbGroup3 width={spaces.windowWidth} />,
     title: 'Eat Well',
     description:
       "Let's start a healthy lifestyle with us, we can determine your diet every day. healthy eating is fun",
@@ -59,7 +53,7 @@ const OnboardingData: IDataItem[] = [
   },
   {
     id: 3,
-    img: <OnbGroup4 width={width} />,
+    img: <OnbGroup4 width={spaces.windowWidth} />,
     title: 'Improve Sleep  Quality',
     description:
       'Improve the quality of your sleep with us, good quality sleep can bring a good mood in the morning',

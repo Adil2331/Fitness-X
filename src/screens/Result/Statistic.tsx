@@ -1,8 +1,8 @@
 import React from 'react';
-import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import {spaces} from '../../theme';
 
-const width = Dimensions.get('screen').width;
 interface IStaticItem {
   title: string;
   firstParam: number;
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   mainInner: {
     flexDirection: 'row',
     alignItems: 'center',
-    maxWidth: width - 122,
+    maxWidth: spaces.windowWidth - 122,
   },
   mainInnerText: {
     fontSize: 12,
