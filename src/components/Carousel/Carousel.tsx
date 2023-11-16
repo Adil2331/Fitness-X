@@ -6,12 +6,12 @@ import {
   SLIDE_ANIMATION_TYPE,
   SlideItem,
 } from 'react-native-carousel-infinity';
-import {spaces} from '../theme';
+import {spaces} from '../../theme';
 
 const data: SlideItem[] = [
-  {id: '1', image: require('../assets/Card-Goals.png')},
-  {id: '2', image: require('../assets/Card-Goals2.png')},
-  {id: '3', image: require('../assets/Card-Goals3.png')},
+  {id: '1', image: require('../../assets/Card-Goals.png')},
+  {id: '2', image: require('../../assets/Card-Goals2.png')},
+  {id: '3', image: require('../../assets/Card-Goals3.png')},
 ];
 
 const SLIDE_WIDTH = spaces.windowWidth - spaces.windowWidth * 0.3;

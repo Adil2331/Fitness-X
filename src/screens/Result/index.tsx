@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {
   ScrollView,
   StyleSheet,
@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import BackNavs from '../../assets/svg/BackNavs';
 import DetailsNavs from '../../assets/svg/DetailsNavs';
-import {BtnLayout} from '../../components/BtnLayout';
+import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 import {useNavigation} from '@react-navigation/native';
 import {PrivateStackScreenProps} from '../../navigation/Private';
 import {AverageProgess} from './AverageProgess';

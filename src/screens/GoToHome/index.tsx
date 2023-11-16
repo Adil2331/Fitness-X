@@ -1,8 +1,8 @@
 import React from 'react';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import GoHomeImg from '../../assets/svg/GoHome-Img';
 import {StyleSheet, Text, View} from 'react-native';
-import {BtnLayout} from '../../components/BtnLayout';
+import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 import {setLogin} from '../../redux/loginSlice';
 import {useAppDispatch} from '../../redux/store';
 

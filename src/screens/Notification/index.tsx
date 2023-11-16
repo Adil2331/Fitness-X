@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {
   ScrollView,
   StyleSheet,

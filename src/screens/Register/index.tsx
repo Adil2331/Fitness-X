@@ -144,9 +144,9 @@ export const Regiter = () => {
       <View style={styles.bottomContainer}>
         <BtnLayout onPress={() => navigate('Goal')} text="Register" />
         <View style={styles.orItemContainer}>
-          <View style={styles.lineItem} />
+          <View style={styles.lineItem}></View>
           <Text>Or</Text>
-          <View style={styles.lineItem} />
+          <View style={styles.lineItem}></View>
         </View>
         <View style={styles.socialContainer}>
           <TouchableOpacity style={styles.socialItems}>

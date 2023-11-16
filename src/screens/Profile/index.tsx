@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {UserInfo} from '../../components/UserInfo';
 import {AccountInfo} from '../../components/AccountInfo';
 import {NotificationInfo} from '../../components/Notification';

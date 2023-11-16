@@ -8,7 +8,7 @@ import Btn4 from '../../assets/svg/Btn4';
 import OnbGroup2 from '../../assets/svg/OnbGroup2';
 import OnbGroup3 from '../../assets/svg/OnbGroup3';
 import OnbGroup4 from '../../assets/svg/OnbGroup4';
-import {SafeAreaLayout} from '../SafeAreaLayout';
+import {SafeAreaLayout} from '../SafeAreaLayout/SafeAreaLayout';
 import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
 import {spaces} from '../../theme';

@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {TodayTarget} from '../../components/TodayTarget';
 import {ActivityProgress} from '../../components/ActivityProgress';
 import {LatestActivity} from '../../components/LatestActivity';

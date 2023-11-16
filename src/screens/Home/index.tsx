@@ -9,7 +9,7 @@ import {
 import {useNavigation} from '@react-navigation/native';
 
 // components
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {HomeHeader} from '../../components/HomeHeader';
 
 // assets

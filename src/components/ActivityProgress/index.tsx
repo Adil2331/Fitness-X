@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {InnerBtn} from '../InnerBtn';
+import {InnerBtn} from '../InnerBtn/InnerBtn';
 import {spaces} from '../../theme';
 
 export const ActivityProgress = () => {

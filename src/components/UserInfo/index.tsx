@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import FirstPerson from '../../assets/svg/FirstPerson';
-import {InnerBtn} from '../InnerBtn';
+import {InnerBtn} from '../InnerBtn/InnerBtn';
 import {useDispatch} from 'react-redux';
 import {setLogin} from '../../redux/loginSlice';
 

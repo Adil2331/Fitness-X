@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {
   ScrollView,
   StyleSheet,
@@ -13,7 +13,7 @@ import {useNavigation} from '@react-navigation/native';
 import {PrivateStackScreenProps} from '../../navigation/Private';
 import CalendarIcon from '../../assets/svg/CalendarIcon';
 import Arrow from '../../assets/ProfileImg/Arrow';
-import {BtnLayout} from '../../components/BtnLayout';
+import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 
 interface ICompareItem {
   title: string;

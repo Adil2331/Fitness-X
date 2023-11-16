@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {
   Platform,
   StyleSheet,
@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {BtnLayout} from '../../components/BtnLayout';
+import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 import GoogleIcon from '../../assets/svg/Google-icon';
 import FacebookIcon from '../../assets/svg/Facebook-icon';
 import {Controller, useForm} from 'react-hook-form';

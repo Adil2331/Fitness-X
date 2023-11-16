@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {PublicStackScreenProps} from '../../navigation/Public';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout';
-import {BtnLayout} from '../../components/BtnLayout';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
+import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 
 export const Welcome: FC<PublicStackScreenProps> = ({navigation}) => {
   const {navigate} = navigation;
