@@ -8,21 +8,24 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
+import {useNavigation} from '@react-navigation/native';
+import {PublicStackScreenProps} from '../../navigation/Public';
+
+// assets
 import FirstName from '../../assets/svg/FirstName';
 import Email from '../../assets/svg/Email';
 import Password from '../../assets/svg/Password';
-import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
-import {useNavigation} from '@react-navigation/native';
-import {PublicStackScreenProps} from '../../navigation/Public';
 import GoogleIcon from '../../assets/svg/Google-icon';
 import FacebookIcon from '../../assets/svg/Facebook-icon';
 
-export const Regiter = () => {
+// components
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
+import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
+
+export const Register = () => {
   const {navigate} = useNavigation<PublicStackScreenProps['navigation']>();
   const {
     control,
-    // handleSubmit,
     formState: {errors},
   } = useForm({
     defaultValues: {
@@ -32,7 +35,6 @@ export const Regiter = () => {
       password: '',
     },
   });
-  //   const onSubmit = data => console.log(data);
 
   return (
     <SafeAreaLayout style={styles.container} bottom top>
@@ -144,9 +146,9 @@ export const Regiter = () => {
       <View style={styles.bottomContainer}>
         <BtnLayout onPress={() => navigate('Goal')} text="Register" />
         <View style={styles.orItemContainer}>
-          <View style={styles.lineItem}></View>
+          <View style={styles.lineItem} />
           <Text>Or</Text>
-          <View style={styles.lineItem}></View>
+          <View style={styles.lineItem} />
         </View>
         <View style={styles.socialContainer}>
           <TouchableOpacity style={styles.socialItems}>

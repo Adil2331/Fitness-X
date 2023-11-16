@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
+
 import {
   ScrollView,
   StyleSheet,
@@ -7,12 +7,17 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import BackNavs from '../../assets/svg/BackNavs';
-import DetailsNavs from '../../assets/svg/DetailsNavs';
 import {useNavigation} from '@react-navigation/native';
 import {PrivateStackScreenProps} from '../../navigation/Private';
+
+// assets
+import BackNavs from '../../assets/svg/BackNavs';
+import DetailsNavs from '../../assets/svg/DetailsNavs';
 import CalendarIcon from '../../assets/svg/CalendarIcon';
 import Arrow from '../../assets/ProfileImg/Arrow';
+
+// components
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 
 interface ICompareItem {

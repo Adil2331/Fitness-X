@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {PublicStackScreenProps} from '../../navigation/Public';
+
+// components
 import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 

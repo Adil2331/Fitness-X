@@ -1,5 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
+
+// components
 import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {UserInfo} from '../../components/UserInfo';
 import {AccountInfo} from '../../components/AccountInfo';

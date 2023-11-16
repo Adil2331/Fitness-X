@@ -8,14 +8,18 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
-import GoogleIcon from '../../assets/svg/Google-icon';
-import FacebookIcon from '../../assets/svg/Facebook-icon';
 import {Controller, useForm} from 'react-hook-form';
-import Password from '../../assets/svg/Password';
-import Email from '../../assets/svg/Email';
 import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
+
+// assets
+import GoogleIcon from '../../assets/svg/Google-icon';
+import FacebookIcon from '../../assets/svg/Facebook-icon';
+import Password from '../../assets/svg/Password';
+import Email from '../../assets/svg/Email';
+
+// components
+import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 
 export const Login = () => {
   const {navigate} = useNavigation<PublicStackScreenProps['navigation']>();

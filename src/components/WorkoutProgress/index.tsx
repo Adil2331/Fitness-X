@@ -1,5 +1,7 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
+
+// components
 import {InnerBtn} from '../InnerBtn/InnerBtn';
 
 export const WorkoutProgress = () => {

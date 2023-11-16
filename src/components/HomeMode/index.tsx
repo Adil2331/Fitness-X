@@ -1,5 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
+
+// assets
 import WaterGraph from '../../assets/HomeImg/WaterGraph';
 import WaterText from '../../assets/HomeImg/WaterText';
 import TimeStatus from '../../assets/HomeImg/TimeStatus';

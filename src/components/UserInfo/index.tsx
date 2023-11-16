@@ -1,7 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+
+// assets
 import FirstPerson from '../../assets/svg/FirstPerson';
+
+// components
 import {InnerBtn} from '../InnerBtn/InnerBtn';
+
+// redux
 import {useDispatch} from 'react-redux';
 import {setLogin} from '../../redux/loginSlice';
 

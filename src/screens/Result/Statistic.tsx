@@ -1,6 +1,8 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+
+// styles
 import {spaces} from '../../theme';
 
 interface IStaticItem {

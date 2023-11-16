@@ -1,5 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+
+// assets
 import Arrow from '../../assets/ProfileImg/Arrow';
 import MessageIcon from '../../assets/ProfileImg/MessegeIcon';
 import PrivacyIcon from '../../assets/ProfileImg/PrivacyIcon';

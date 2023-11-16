@@ -1,7 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import WorkoutBtn from '../../assets/HomeImg/WorkoutBtn';
 import LinearGradient from 'react-native-linear-gradient';
+
+// assets
+import WorkoutBtn from '../../assets/HomeImg/WorkoutBtn';
 import HomeActivity1 from '../../assets/HomeImg/HomeActivity1';
 import HomeActivity2 from '../../assets/HomeImg/HomeActivity2';
 import HomeActivity3 from '../../assets/HomeImg/HomeActivity3';

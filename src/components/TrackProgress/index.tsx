@@ -1,6 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+
+// assets
 import CalendarIcon from '../../assets/ProgressPhotoImg/Calendar';
 
 export const TrackProgress = () => {

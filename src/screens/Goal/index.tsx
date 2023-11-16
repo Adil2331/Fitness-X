@@ -1,10 +1,12 @@
 import React from 'react';
-import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {StyleSheet, Text, View} from 'react-native';
-import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
+
+// components
 import {SimpleCarousel} from '../../components/Carousel/Carousel';
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
+import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
 
 export const Goal = () => {
   const {navigate} = useNavigation<PublicStackScreenProps['navigation']>();

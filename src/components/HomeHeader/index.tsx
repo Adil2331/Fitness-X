@@ -1,5 +1,7 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
+
+// styles
 import {spaces} from '../../theme';
 
 export const HomeHeader = () => {

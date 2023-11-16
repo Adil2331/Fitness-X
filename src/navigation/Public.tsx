@@ -8,7 +8,7 @@ import {Welcome} from '../screens/Welcome';
 import {Goal} from '../screens/Goal';
 import {Login} from '../screens/Login';
 import {GoToHome} from '../screens/GoToHome';
-import {Regiter} from '../screens/Regiter';
+import {Register} from '../screens/Register';
 
 type PublicStackParamList = {
   Welcome: undefined;
@@ -37,7 +37,7 @@ export const Public = () => {
       />
       <Screen
         name="Register"
-        component={Regiter}
+        component={Register}
         options={{headerTitle: '', headerShown: false}}
       />
       <Screen

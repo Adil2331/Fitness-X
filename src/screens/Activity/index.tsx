@@ -1,5 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
+
+// components
 import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {TodayTarget} from '../../components/TodayTarget';
 import {ActivityProgress} from '../../components/ActivityProgress';

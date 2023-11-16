@@ -7,21 +7,17 @@ import {
   View,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-
-// components
-import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
-import {HomeHeader} from '../../components/HomeHeader';
+import {PrivateStackScreenProps} from '../../navigation/Private';
 
 // assets
 import NotificationIcon from '../../assets/svg/NotificationIcon';
 
-// navigation
-import {PrivateStackScreenProps} from '../../navigation/Private';
+// components
+import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
+import {HomeHeader} from '../../components/HomeHeader';
 import {HomeMode} from '../../components/HomeMode';
 import {WorkoutProgress} from '../../components/WorkoutProgress';
 import {HomeLatestActivity} from '../../components/HomeLatestActivity';
-
-// DRY Dont Repeat Yourself
 
 export const Home: React.FC = () => {
   const {navigate} = useNavigation<PrivateStackScreenProps['navigation']>();

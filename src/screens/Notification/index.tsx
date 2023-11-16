@@ -8,12 +8,16 @@ import {
   View,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+
+// assets
 import {PrivateStackScreenProps} from '../../navigation/Private';
 import NotificationIcon1 from '../../assets/Notification/NotificationIcon1';
 import NotificationIcon2 from '../../assets/Notification/NotificationIcon2';
 import NotificationIcon3 from '../../assets/Notification/NotificationIcon3';
 import NotificationIcon4 from '../../assets/Notification/NotificationIcon4';
 import MoreIcon from '../../assets/svg/MoreIcon';
+
+// components
 import {HeaderLayout} from '../../components/HeaderLayout';
 
 interface IItem {

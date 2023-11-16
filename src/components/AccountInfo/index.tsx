@@ -1,5 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+
+// assets
 import Arrow from '../../assets/ProfileImg/Arrow';
 import ProfileIcon from '../../assets/ProfileImg/PtofileIcon';
 import Achievement from '../../assets/ProfileImg/Achievement';

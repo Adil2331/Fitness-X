@@ -6,6 +6,8 @@ import {
   SLIDE_ANIMATION_TYPE,
   SlideItem,
 } from 'react-native-carousel-infinity';
+
+// styles
 import {spaces} from '../../theme';
 
 const data: SlideItem[] = [
