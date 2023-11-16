@@ -50,11 +50,7 @@ export const Gallery = () => {
           showsHorizontalScrollIndicator={false}>
           <View style={styles.galleryItems}>
             {arr.reverse().map((img, i) => (
-              <Image
-                source={img}
-                style={i !== arr.length - 1 && styles.galleryItem}
-                key={i}
-              />
+              <Image source={img} style={styles.galleryItem} key={i} />
             ))}
           </View>
         </ScrollView>
@@ -94,6 +90,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   galleryItem: {
+    width: 100,
+    height: 100,
     marginRight: 10,
   },
 });

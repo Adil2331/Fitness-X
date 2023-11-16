@@ -16,7 +16,7 @@ export const HomeHeader = () => {
       <View style={styles.imgConatiner}>
         <Image
           source={require('../../assets/icons/HomeImg/Action.png')}
-          style={{width: spaces.windowWidth - 63}}
+          style={{width: spaces.windowWidth - 60}}
         />
       </View>
       <Text style={styles.adtivityTitle}>Activity Status</Text>
