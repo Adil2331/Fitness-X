@@ -1,14 +1,14 @@
 import React from 'react';
 import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {
-  Platform,
+  // Platform,
   StyleSheet,
   Text,
-  TextInput,
+  // TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
-import {Controller, useForm} from 'react-hook-form';
+import {FormProvider, useForm} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
 
@@ -20,14 +20,11 @@ import Email from '../../assets/icons/Email';
 
 // components
 import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
+import {TextField} from '../../components/TextField/TextField';
 
 export const Login = () => {
   const {navigate} = useNavigation<PublicStackScreenProps['navigation']>();
-  const {
-    control,
-    // handleSubmit,
-    // formState: {errors},
-  } = useForm({
+  const methods = useForm({
     defaultValues: {
       email: '',
       password: '',
@@ -40,54 +37,68 @@ export const Login = () => {
         <Text style={styles.title}>Welcome Back</Text>
       </View>
       <View>
-        <Controller
-          control={control}
-          rules={{
-            maxLength: 100,
-          }}
-          render={({field: {onChange, onBlur, value}}) => (
-            <View
-              style={[
-                styles.inputContainer,
-                Platform.OS === 'ios' ? styles.inputIos : styles.inputAndroid,
-              ]}>
-              <Email style={styles.inputImg} />
-              <TextInput
-                style={styles.inputText}
-                placeholderTextColor={'#ADA4A5'}
-                placeholder="Email"
-                onBlur={onBlur}
-                onChangeText={onChange}
-                value={value}
-              />
-            </View>
-          )}
-          name="email"
-        />
-        <Controller
-          control={control}
-          rules={{
-            maxLength: 100,
-          }}
-          render={({field: {onChange, onBlur, value}}) => (
-            <View
-              style={[
-                styles.inputContainer,
-                Platform.OS === 'ios' ? styles.inputIos : styles.inputAndroid,
-              ]}>
-              <Password style={styles.inputImg} />
-              <TextInput
-                style={styles.inputText}
-                placeholderTextColor={'#ADA4A5'}
-                placeholder="Password"
-                onBlur={onBlur}
-                onChangeText={onChange}
-                value={value}
-              />
-            </View>
-          )}
-          name="password"
-        />
+        <FormProvider {...methods}>
+          <TextField
+            placeholder="Email"
+            name={'email'}
+            item={<Email style={styles.inputImg} />}
+          />
+          <TextField
+            placeholder="Password"
+            name={'password'}
+            item={<Password style={styles.inputImg} />}
+          />
+        </FormProvider>
+        {/* <View>
+          <Controller
+            control={control}
+            rules={{
+              maxLength: 100,
+            }}
+            render={({field: {onChange, onBlur, value}}) => (
+              <View
+                style={[
+                  styles.inputContainer,
+                  Platform.OS === 'ios' ? styles.inputIos : styles.inputAndroid,
+                ]}>
+                <Email style={styles.inputImg} />
+                <TextInput
+                  style={styles.inputText}
+                  placeholderTextColor={'#ADA4A5'}
+                  placeholder="Email"
+                  onBlur={onBlur}
+                  onChangeText={onChange}
+                  value={value}
+                />
+              </View>
+            )}
+            name="email"
+          />
+          <Controller
+            control={control}
+            rules={{
+              maxLength: 100,
+            }}
+            render={({field: {onChange, onBlur, value}}) => (
+              <View
+                style={[
+                  styles.inputContainer,
+                  Platform.OS === 'ios' ? styles.inputIos : styles.inputAndroid,
+                ]}>
+                <Password style={styles.inputImg} />
+                <TextInput
+                  style={styles.inputText}
+                  placeholderTextColor={'#ADA4A5'}
+                  placeholder="Password"
+                  onBlur={onBlur}
+                  onChangeText={onChange}
+                  value={value}
+                />
+              </View>
+            )}
+            name="password"
+          />
+        </View> */}
         <TouchableOpacity>
           <Text style={styles.textForgot}>Forgot your password?</Text>
         </TouchableOpacity>

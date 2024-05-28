@@ -1,15 +1,9 @@
 import React from 'react';
-import {Controller, useForm} from 'react-hook-form';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {FormProvider, useForm} from 'react-hook-form';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {PublicStackScreenProps} from '../../navigation/Public';
+// import * as yup from 'yup';
 
 // assets
 import FirstName from '../../assets/icons/FirstName';
@@ -21,13 +15,27 @@ import FacebookIcon from '../../assets/icons/Facebook-icon';
 // components
 import {SafeAreaLayout} from '../../components/SafeAreaLayout/SafeAreaLayout';
 import {BtnLayout} from '../../components/BtnLayout/BtnLayout';
+import {TextField} from '../../components/TextField/TextField';
+
+// const schema = yup.object().shape({
+//   firstName: yup
+// name: yup
+//   .string()
+//   .matches(
+//     /^[А-Яа-я]+$/,
+//     'Имя должно содержать только буквы кириллицы и без пробелов',
+//   )
+//   .required('Имя является обязательным полем'),
+// description: yup
+//   .string()
+//   .min(10, 'Описание должно содержать минимум 10 символов')
+//   .required('Описание является обязательным полем'),
+// image: yup.string().required('Выберите изображение'),
+// });
 
 export const Register = () => {
   const {navigate} = useNavigation<PublicStackScreenProps['navigation']>();
-  const {
-    control,
-    formState: {errors},
-  } = useForm({
+  const methods = useForm({
     defaultValues: {
       firstName: '',
       lastName: '',
@@ -35,13 +43,41 @@ export const Register = () => {
       password: '',
     },
   });
+  // const {
+  //   control,
+  //   formState: {errors},
+  // } = useForm({});
 
   return (
     <SafeAreaLayout style={styles.container} bottom top>
       <Text style={styles.text}>Hey there,</Text>
       <Text style={styles.title}>Create an Account</Text>
       <View>
-        <Controller
+        <FormProvider {...methods}>
+          <TextField
+            placeholder="First name"
+            name={'firstName'}
+            item={<FirstName style={styles.inputImg} />}
+          />
+          <TextField
+            placeholder="Last name"
+            name={'lastName'}
+            item={<FirstName style={styles.inputImg} />}
+          />
+          <TextField
+            placeholder="Email"
+            name={'email'}
+            item={<Email style={styles.inputImg} />}
+          />
+          <TextField
+            placeholder="Password"
+            name={'password'}
+            item={<Password style={styles.inputImg} />}
+          />
+          {/* <Button title="Submit" onPress={handleSubmit(onSubmit)} /> */}
+        </FormProvider>
+        {/* <View>
+          <Controller
           control={control}
           rules={{
             required: true,
@@ -141,7 +177,7 @@ export const Register = () => {
           )}
           name="password"
         />
-        {/* <Button title="Submit" onPress={handleSubmit(onSubmit)} /> */}
+        </View> */}
       </View>
       <View style={styles.bottomContainer}>
         <BtnLayout onPress={() => navigate('Goal')} text="Register" />
