@@ -21,7 +21,6 @@ import {HomeLatestActivity} from '../../components/HomeLatestActivity';
 
 export const Home: React.FC = () => {
   const {navigate} = useNavigation<PrivateStackScreenProps['navigation']>();
-  console.log('test');
   return (
     <SafeAreaLayout style={styles.container} bottom top>
       <View style={styles.headerContainer}>
